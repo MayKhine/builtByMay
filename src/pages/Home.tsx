@@ -1,9 +1,10 @@
 import * as stylex from "@stylexjs/stylex"
+import { MenuBar } from "../components/MenuBar"
 export const Home = () => {
   return (
     <div {...stylex.props(styles.base)}>
-      <section {...stylex.props(styles.page1)}>
-        <div {...stylex.props(styles.menubar)}>Menu bar</div>
+      <MenuBar />
+      <section {...stylex.props(styles.page1, styles.section)}>
         <h2>Page 1</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
@@ -20,9 +21,7 @@ export const Home = () => {
           vehicula ante et risus feugiat, id fringilla est bibendum.
         </p>
       </section>
-      <section {...stylex.props(styles.page1)}>
-        <div {...stylex.props(styles.menubar)}>Menu bar</div>
-
+      <section {...stylex.props(styles.page2, styles.section)}>
         <h2>Page 2</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
@@ -39,9 +38,7 @@ export const Home = () => {
           vehicula ante et risus feugiat, id fringilla est bibendum.
         </p>
       </section>
-      <section {...stylex.props(styles.page1)}>
-        <div {...stylex.props(styles.menubar)}>Menu bar</div>
-
+      <section {...stylex.props(styles.page3, styles.section)}>
         <h2>Page 3</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
@@ -58,9 +55,7 @@ export const Home = () => {
           vehicula ante et risus feugiat, id fringilla est bibendum.
         </p>
       </section>
-      <section {...stylex.props(styles.page1)}>
-        <div {...stylex.props(styles.menubar)}>Menu bar</div>
-
+      <section {...stylex.props(styles.page4, styles.section)}>
         <h2>Page 4</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
@@ -87,12 +82,15 @@ const styles = stylex.create({
     overflowY: "scroll",
     maxHeight: "100vh",
   },
-  page1: {
-    height: "100vh",
-    backgroundColor: "gray",
+  section: {
+    height: "100vh ",
+    paddingTop: "30px",
+    // backgroundColor: "gray",
     scrollSnapAlign: "start",
     // scrollSnapStop: "normal",
-    scrollMarginTop: "30px",
+  },
+  page1: {
+    backgroundColor: "lightblue",
   },
   page2: {
     backgroundColor: "pink",
