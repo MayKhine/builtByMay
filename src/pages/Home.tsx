@@ -1,9 +1,12 @@
 import * as stylex from "@stylexjs/stylex"
 import { MenuBar } from "../components/MenuBar"
+import { Section1 } from "../components/homeSections/Section1"
 export const Home = () => {
   return (
     <div {...stylex.props(styles.base)}>
       <MenuBar />
+      <Section1 />
+
       <section {...stylex.props(styles.page1, styles.section)}>
         <h2>Page 1</h2>
         <p>
@@ -21,6 +24,8 @@ export const Home = () => {
           vehicula ante et risus feugiat, id fringilla est bibendum.
         </p>
       </section>
+      <Section1 />
+
       <section {...stylex.props(styles.page2, styles.section)}>
         <h2>Page 2</h2>
         <p>
@@ -85,7 +90,6 @@ const styles = stylex.create({
   section: {
     height: "100vh ",
     paddingTop: "30px",
-    // backgroundColor: "gray",
     scrollSnapAlign: "start",
     // scrollSnapStop: "normal",
   },

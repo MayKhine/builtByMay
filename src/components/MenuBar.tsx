@@ -8,6 +8,6 @@ const styles = styleX.create({
     backgroundColor: "pink",
     position: "fixed",
     top: "0",
-    width: "99%",
+    width: "100%",
   },
 })
