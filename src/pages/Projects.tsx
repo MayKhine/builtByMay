@@ -1,3 +1,3 @@
 export const Projects = () => {
-  return <div> Projects</div>
+  return <div> A page to showcase all projects</div>
 }
