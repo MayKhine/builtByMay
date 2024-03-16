@@ -1,11 +1,15 @@
 import * as stylex from "@stylexjs/stylex"
-import { tokens, colors } from "../tokens.stylex"
+import { tokens } from "../tokens.stylex"
 import { MenuBar } from "../components/MenuBar"
+import { ProjectCard, ProjectType } from "../components/project/ProjectCard"
+
 export const Home = () => {
+  const project1: ProjectType = { title: "TEST", text: "TEST TEST TEST" }
   return (
     <div>
       <MenuBar />
-      <div {...stylex.props(styles.base)}>Hello</div>
+      <div {...stylex.props(styles.base)}>Helloooo</div>
+      <ProjectCard projectData={project1} />
     </div>
   )
 }
@@ -13,9 +17,10 @@ export const Home = () => {
 const styles = stylex.create({
   base: {
     // maxHeight: "100vh",
-    height: "100vh",
+    // height: "100vh",
     // backgroundColor: "blue",
-    backgroundColor: tokens.darkBlue,
+    backgroundColor: tokens.darkBlue2,
+
     // backgroundColor: colors.white,
   },
 

@@ -9,10 +9,6 @@ export const tokens = stylex.defineVars({
   offWhite: "#FFFDF7",
 })
 
-export const colors = stylex.defineVars({
-  white: "#FFFDF7",
-})
-
 // export const colorsObj = {
 //   offwhite: "#FFFBF2",
 //   offwhite2: "#E9E0CB",
