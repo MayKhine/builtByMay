@@ -2,7 +2,7 @@ import * as stylex from "@stylexjs/stylex"
 
 export const tokens = stylex.defineVars({
   borderRadius: "4px",
-  fontSize: "16px",
+  // fontSize: "16px",
   darkBlue: "#0A2342",
   darkBlue2: "#22446D",
   blue: "#4F77B3",

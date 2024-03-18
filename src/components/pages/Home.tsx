@@ -1,25 +1,22 @@
 import * as stylex from "@stylexjs/stylex"
 import { tokens } from "../../tokens.stylex"
 import { MenuBar } from "../layouts/MenuBar"
-
+import { HomeCenterDiv } from "../home/HomeCenterDiv"
 export const Home = () => {
   return (
     <div {...stylex.props(styles.base)}>
       <MenuBar />
-      <div>HELLO HOME PAGE</div>
+      <HomeCenterDiv />
     </div>
   )
 }
 
 const styles = stylex.create({
   base: {
-    // maxHeight: "100vh",
-    // marginTop: "30px",
     height: "100vh",
-    // backgroundColor: "blue",
     backgroundColor: tokens.offWhite,
-
-    // backgroundColor: colors.white,
+    display: "flex",
+    flexDirection: "column",
   },
 
   menubar: {

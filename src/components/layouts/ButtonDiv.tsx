@@ -13,8 +13,9 @@ export const ButtonDiv = ({ text, onClickFn }: ButtonDivProps) => {
   }
   return (
     <div {...styleX.props(styles.base)} onClick={onClickFn}>
-      {/* {text} */}
-      <Link to={linkString}> {text} </Link>
+      <Link {...styleX.props(styles.text)} to={linkString}>
+        {text}
+      </Link>
     </div>
   )
 }
@@ -27,5 +28,9 @@ const styles = styleX.create({
     padding: ".2rem",
     paddingLeft: ".5rem",
     paddingRight: ".5rem",
+  },
+  text: {
+    textDecoration: "none",
+    color: "black",
   },
 })

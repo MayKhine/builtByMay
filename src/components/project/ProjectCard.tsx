@@ -30,15 +30,13 @@ export const ProjectCard = ({ projectData }: ProjectCardProps) => {
 
 const styles = styleX.create({
   base: {
-    minWidth: "300px",
-    minHeight: "300px",
-    width: "30%",
-    height: "30%",
+    minWidth: "517px",
+    // minHeight: "300px",
+    // width: "100%",
     display: "flex",
     flexDirection: "column",
     backgroundColor: tokens.darkBlue2,
     color: tokens.offWhite,
-    margin: "5px",
   },
   title: {
     fontWeight: "600",

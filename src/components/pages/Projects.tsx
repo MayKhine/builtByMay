@@ -1,5 +1,7 @@
+import * as styleX from "@stylexjs/stylex"
 import { MenuBar } from "../layouts/MenuBar"
 import { ProjectCard, ProjectType } from "../project/ProjectCard"
+import { tokens } from "../../tokens.stylex"
 
 export const Projects = () => {
   const project1: ProjectType = {
@@ -14,11 +16,33 @@ export const Projects = () => {
     link: "https://maykhine.github.io/todo-app/",
   }
   return (
-    <div>
+    <div {...styleX.props(styles.base)}>
       <MenuBar />
-      <div>Project page</div>
-      <ProjectCard projectData={project1} />
-      <ProjectCard projectData={project2} />
+      <div {...styleX.props(styles.projectsDiv)}>
+        <ProjectCard projectData={project1} />
+        <ProjectCard projectData={project2} />
+      </div>
     </div>
   )
 }
+
+const styles = styleX.create({
+  base: {
+    height: "100vh",
+    backgroundColor: tokens.offWhite,
+    display: "flex",
+    flexDirection: "column",
+  },
+
+  projectsDiv: {
+    marginTop: "5%",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+    // background: tokens.offWhite,
+    paddingBottom: "10%",
+    alignItems: "center",
+  },
+})
