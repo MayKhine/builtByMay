@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import "./index.css"
 
-import { Home } from "./pages/Home.tsx"
-import { Projects } from "./pages/Projects.tsx"
-import { About } from "./pages/About.tsx"
+import { Home } from "./components/pages/Home.tsx"
+import { Projects } from "./components/pages/Projects.tsx"
+import { About } from "./components/pages/About.tsx"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
