@@ -22,26 +22,44 @@ export const ProjectCard = ({ projectData }: ProjectCardProps) => {
           {projectData.title}
         </a>
       </div>
-
-      <div> {projectData.text}</div>
+      <div {...styleX.props(styles.subText)}> {projectData.text}</div>
+      <img
+        {...styleX.props(styles.img)}
+        src="https://cdn-media-1.freecodecamp.org/images/1*Aq7TXpuzXp8lTX0Dhxw_DQ.png"
+      ></img>
     </div>
   )
 }
 
 const styles = styleX.create({
   base: {
-    minWidth: "517px",
-    // minHeight: "300px",
-    // width: "100%",
+    // minWidth: "517px",
+    minWidth: "500px",
+
     display: "flex",
     flexDirection: "column",
     backgroundColor: tokens.darkBlue2,
     color: tokens.offWhite,
+    borderRadius: ".5rem",
+    alignItems: "center",
+    padding: "15px",
+  },
+  textDiv: {
+    padding: "1rem",
   },
   title: {
     fontWeight: "600",
     cursor: "pointer",
     color: tokens.offWhite,
     textDecorationLine: "none",
+  },
+  subText: {
+    fontSize: ".8rem",
+    fontWeight: "400",
+    fontStyle: "italic",
+  },
+  img: {
+    // width: "10%",
+    width: "30rem",
   },
 })
