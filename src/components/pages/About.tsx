@@ -1,48 +1,24 @@
-// import { tokens } from "../../tokens.stylex"
 import { MenuBar } from "../menuBar/MenuBar"
-import * as styleX from "@stylexjs/stylex"
+import * as stylex from "@stylexjs/stylex"
 
 export const About = () => {
   return (
-    <div>
+    <div {...stylex.props(styles.page)}>
       <MenuBar />
-      <div {...styleX.props(styles.base)}>
-        <div {...styleX.props(styles.center)}> Hello</div>
-      </div>
+      <div {...stylex.props(styles.base)}>about</div>
     </div>
   )
 }
 
-const styles = styleX.create({
-  base: {
-    display: "flex",
-    width: "100%",
+const styles = stylex.create({
+  page: {
     height: "100%",
-    justifyContent: "center",
-    paddingBottom: "10%",
-  },
-  center: {
-    minWidth: "517px",
-    alignSelf: "center",
-    alignItems: "center",
-  },
-  mainText: {
-    fontWeight: "700",
-  },
-  subText: {
-    fontWeight: "500",
-  },
-  groupText: {
+    minHeight: "100vh",
     display: "flex",
+    flexDirection: "row",
+    backgroundColor: "var(--background-color)",
+    color: "var(--text-color)",
   },
-  proejctText: {
-    marginLeft: ".3rem",
-    marginRight: ".3rem",
-    fontWeight: "500",
-    fontStyle: "italic",
-    cursor: "pointer",
-  },
-  linkedText: {
-    textDecoration: "none",
-  },
+
+  base: { display: "flex" },
 })

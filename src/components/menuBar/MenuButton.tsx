@@ -23,12 +23,10 @@ export const MenuButton = ({ text, onClickFn }: MenuButtonType) => {
 const styles = styleX.create({
   base: {
     cursor: "pointer",
-    width: "max-content",
-    padding: ".2rem",
-    paddingLeft: ".5rem",
-    paddingRight: ".5rem",
   },
   text: {
     textDecoration: "none",
+    color: "var(--text-color)",
+    fontWeight: "200",
   },
 })
