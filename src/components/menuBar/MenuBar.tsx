@@ -1,24 +1,23 @@
 import * as styleX from "@stylexjs/stylex"
-import { ButtonDiv } from "./ButtonDiv"
-
+import { MenuButton } from "./MenuButton"
 export const MenuBar = () => {
   return (
     <div {...styleX.props(styles.base)}>
-      <ButtonDiv
+      <MenuButton
         text="HOME"
         onClickFn={() => {
           console.log("Navigate to Home ")
           // return <Navigate to="/" replace={true} />
         }}
       />
-      <ButtonDiv
+      <MenuButton
         text="PROJECTS"
         onClickFn={() => {
           console.log("Navigate to Projects ")
           // return <Navigate to="/projects" replace={true} />
         }}
       />
-      <ButtonDiv
+      <MenuButton
         text="ABOUT"
         onClickFn={() => {
           console.log("Navigate to About ")
@@ -30,10 +29,12 @@ export const MenuBar = () => {
 
 const styles = styleX.create({
   base: {
-    backgroundColor: "pink",
     display: "flex",
     gap: ".5rem",
     justifyContent: "flex-end",
     paddingRight: "1rem",
+    // backgroundColor: "red",
+    height: "3rem",
+    alignItems: "center",
   },
 })

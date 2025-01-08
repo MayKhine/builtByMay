@@ -1,12 +1,12 @@
 import * as styleX from "@stylexjs/stylex"
 import { Link } from "react-router-dom"
 
-type ButtonDivProps = {
+type MenuButtonType = {
   text: string
   onClickFn: () => void
 }
 
-export const ButtonDiv = ({ text, onClickFn }: ButtonDivProps) => {
+export const MenuButton = ({ text, onClickFn }: MenuButtonType) => {
   let linkString = "/"
   if (text !== "HOME") {
     linkString += `${text.toLocaleLowerCase()}`
@@ -22,7 +22,6 @@ export const ButtonDiv = ({ text, onClickFn }: ButtonDivProps) => {
 
 const styles = styleX.create({
   base: {
-    background: "white",
     cursor: "pointer",
     width: "max-content",
     padding: ".2rem",
@@ -31,6 +30,5 @@ const styles = styleX.create({
   },
   text: {
     textDecoration: "none",
-    color: "black",
   },
 })

@@ -1,5 +1,5 @@
 import * as styleX from "@stylexjs/stylex"
-import { tokens } from "../../tokens.stylex"
+// import { tokens } from "../../tokens.stylex"
 export type ProjectType = {
   title: string
   text: string
@@ -38,8 +38,8 @@ const styles = styleX.create({
 
     display: "flex",
     flexDirection: "column",
-    backgroundColor: tokens.darkBlue2,
-    color: tokens.offWhite,
+    // backgroundColor: tokens.darkBlue2,
+    // color: tokens.offWhite,
     borderRadius: ".5rem",
     alignItems: "center",
     padding: "15px",
@@ -50,7 +50,6 @@ const styles = styleX.create({
   title: {
     fontWeight: "600",
     cursor: "pointer",
-    color: tokens.offWhite,
     textDecorationLine: "none",
   },
   subText: {

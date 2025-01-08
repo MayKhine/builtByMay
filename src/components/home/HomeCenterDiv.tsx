@@ -1,6 +1,6 @@
 import * as styleX from "@stylexjs/stylex"
 import { Link } from "react-router-dom"
-import { tokens } from "../../tokens.stylex"
+// import { tokens } from "../../tokens.stylex"
 
 export const HomeCenterDiv = () => {
   return (
@@ -27,7 +27,7 @@ export const HomeCenterDiv = () => {
 
 const styles = styleX.create({
   base: {
-    background: tokens.offWhite,
+    // background: tokens.offWhite,
     display: "flex",
     width: "100%",
     height: "100%",

@@ -1,6 +1,7 @@
-import { tokens } from "../../tokens.stylex"
-import { MenuBar } from "../layouts/MenuBar"
+// import { tokens } from "../../tokens.stylex"
+import { MenuBar } from "../menuBar/MenuBar"
 import * as styleX from "@stylexjs/stylex"
+
 export const About = () => {
   return (
     <div>
@@ -14,7 +15,6 @@ export const About = () => {
 
 const styles = styleX.create({
   base: {
-    background: tokens.offWhite,
     display: "flex",
     width: "100%",
     height: "100%",
@@ -22,7 +22,6 @@ const styles = styleX.create({
     paddingBottom: "10%",
   },
   center: {
-    backgroundColor: tokens.blue,
     minWidth: "517px",
     alignSelf: "center",
     alignItems: "center",
@@ -44,7 +43,6 @@ const styles = styleX.create({
     cursor: "pointer",
   },
   linkedText: {
-    color: "black",
     textDecoration: "none",
   },
 })

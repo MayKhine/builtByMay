@@ -1,7 +1,7 @@
 import * as styleX from "@stylexjs/stylex"
-import { MenuBar } from "../layouts/MenuBar"
+import { MenuBar } from "../menuBar/MenuBar"
 import { ProjectCard, ProjectType } from "../project/ProjectCard"
-import { tokens } from "../../tokens.stylex"
+// import { tokens } from "../../tokens.stylex"
 
 export const Projects = () => {
   const project1: ProjectType = {
@@ -18,10 +18,10 @@ export const Projects = () => {
   return (
     <div {...styleX.props(styles.base)}>
       <MenuBar />
-      <div {...styleX.props(styles.projectsDiv)}>
+      {/* <div {...styleX.props(styles.projectsDiv)}>
         <ProjectCard projectData={project1} />
         <ProjectCard projectData={project2} />
-      </div>
+      </div> */}
     </div>
   )
 }
@@ -29,7 +29,7 @@ export const Projects = () => {
 const styles = styleX.create({
   base: {
     height: "100vh",
-    backgroundColor: tokens.offWhite,
+    // backgroundColor: tokens.offWhite,
     display: "flex",
     flexDirection: "column",
   },
