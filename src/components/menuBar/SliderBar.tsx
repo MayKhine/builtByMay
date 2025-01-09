@@ -54,6 +54,7 @@ export const SliderBar = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            // backgroundColor: "red",
             width: "100%",
             height: "100%",
           }}
@@ -78,7 +79,7 @@ export const SliderBar = () => {
               y: 0,
               transition: {
                 delay: 0.2, // Stagger the child appearance
-                duration: 0.3,
+                duration: 0.2,
               },
             },
           }}

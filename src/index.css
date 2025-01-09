@@ -9,6 +9,8 @@ p {
   font-weight: 400;
   margin: 0;
   height: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 :root {

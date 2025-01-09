@@ -1,7 +1,6 @@
 import * as stylex from "@stylexjs/stylex"
 import { MenuButton } from "./MenuButton"
 import { useNavigate } from "react-router-dom"
-import { SliderBar } from "./SliderBar"
 import { motion } from "motion/react"
 
 export const MenuBar = () => {
@@ -46,9 +45,6 @@ export const MenuBar = () => {
           }}
         />
       </div>
-      <div {...stylex.props(styles.sliderPopUp)}>
-        <SliderBar />
-      </div>
     </div>
   )
 }
@@ -81,11 +77,5 @@ const styles = stylex.create({
   },
   logoContainer: {
     height: "10rem",
-  },
-  sliderPopUp: {
-    bottom: "0",
-    left: "0",
-    position: "absolute",
-    padding: "2rem",
   },
 })
