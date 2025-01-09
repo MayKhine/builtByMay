@@ -5,6 +5,9 @@ import { useTheme } from "../../useTheme"
 import LightModeIcon from "@mui/icons-material/LightMode"
 import CircleIcon from "@mui/icons-material/Circle"
 import { useNavigate } from "react-router-dom"
+import { motion } from "motion/react"
+import { SliderBar } from "./SliderBar"
+
 export const MenuBar = () => {
   const { toggleTheme } = useTheme()
   const [toggleLightBar, setToggleLightBar] = useState<boolean>(false)
@@ -18,6 +21,7 @@ export const MenuBar = () => {
     "#4B0082", // Indigo
     "#8B00FF", // Violet
   ]
+
   return (
     <div {...stylex.props(styles.base)}>
       <div>
@@ -53,9 +57,12 @@ export const MenuBar = () => {
         />
       </div>
 
-      <div {...stylex.props(styles.sliderContainer)}>
+      <SliderBar />
+      {/* <div {...stylex.props(styles.sliderContainer)}>
         {!toggleLightBar && (
-          <div
+          <motion.div
+            initial={false}
+            animate={{ scale: 1 }}
             {...stylex.props(styles.roundDiv)}
             onClick={() => {
               if (!toggleLightBar) {
@@ -70,11 +77,17 @@ export const MenuBar = () => {
               {...stylex.props(styles.lightModeIcon)}
               fontSize="large"
             />
-          </div>
+          </motion.div>
         )}
         <div>
           {toggleLightBar && (
-            <div
+            <motion.div
+              initial={{ scaleY: 0, scaleX: 1 }}
+              animate={{
+                scale: 1,
+                scaleY: 1,
+                transition: { duration: 0.5, ease: "easeInOut" },
+              }}
               {...stylex.props(styles.sliderBar)}
               onMouseLeave={() => {
                 setToggleLightBar(!toggleLightBar)
@@ -179,10 +192,10 @@ export const MenuBar = () => {
                   toggleTheme("white")
                 }}
               />
-            </div>
+            </motion.div>
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
