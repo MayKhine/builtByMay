@@ -26,7 +26,10 @@ const styles = styleX.create({
   },
   text: {
     textDecoration: "none",
-    color: "var(--text-color)",
+    color: {
+      default: "var(--text-color)",
+      ":hover": "var(--primary-color)",
+    },
     fontWeight: "200",
   },
 })

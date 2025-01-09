@@ -2,23 +2,24 @@ import * as styleX from "@stylexjs/stylex"
 import { Link } from "react-router-dom"
 import { tokens } from "../../tokens.stylex"
 
-export const HomeCenterDiv = () => {
+export const HomeIntro = () => {
   return (
     <div {...styleX.props(styles.base)}>
       <div {...styleX.props(styles.center)}>
-        <div {...styleX.props(styles.mainText)}>Hello, my name is May.</div>
-        <div {...styleX.props(styles.subText)}>
-          I am a full-stack developer based in Boston, MA. I bring designs and
-          ideas to life.
+        <div>Hello!</div>
+        <div>
+          I am a front-end developer with a passion for UI/UX designs. Based in
+          Boston, MA. I bring designs and ideas to life through clean and
+          efficcient code.
         </div>
         <div {...styleX.props(styles.groupText)}>
-          <div>I am working on </div>
+          <div>Currently, I am working on </div>
           <div {...styleX.props(styles.proejctText)}>
             <Link {...styleX.props(styles.linkedText)} to="/projects">
               my personal projects
             </Link>
           </div>
-          <div> to sharpen my tech skills.</div>
+          <div> to sharpen my technical skills.</div>
         </div>
       </div>
     </div>
@@ -27,26 +28,17 @@ export const HomeCenterDiv = () => {
 
 const styles = styleX.create({
   base: {
-    background: tokens.offWhite,
     display: "flex",
     width: "100%",
-    // height: "100%",
-    paddingBottom: "10%",
-    justifyItems: "space-between",
+    fontSize: "1.2rem",
+    paddingTop: "10rem",
+    // backgroundColor: "gray",
+    justifyContent: "center",
   },
   center: {
-    minWidth: "517px",
-    // width: "50%",
-    // width: "50%",
-    alignSelf: "center",
-    alignItems: "center",
-  },
-  mainText: {
-    fontWeight: "700",
-  },
-  subText: {
-    fontWeight: "500",
-    // fontStyle: "italic",
+    maxWidth: "50rem",
+    minWidth: "20rem",
+    // backgroundColor: "lightgray",
   },
   groupText: {
     display: "flex",
@@ -54,12 +46,15 @@ const styles = styleX.create({
   proejctText: {
     marginLeft: ".3rem",
     marginRight: ".3rem",
-    fontWeight: "500",
-    fontStyle: "italic",
-    cursor: "pointer",
   },
   linkedText: {
-    color: "black",
+    color: {
+      default: "var(--primary-color)",
+      ":hover": "var(--secondary-color)",
+    },
     textDecoration: "none",
+    // fontWeight: "200",
+    fontStyle: "italic",
+    cursor: "pointer",
   },
 })

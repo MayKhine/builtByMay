@@ -1,14 +1,15 @@
 import * as stylex from "@stylexjs/stylex"
 import { MenuBar } from "../menuBar/MenuBar"
+import { HomeIntro } from "../home/HomeIntro"
 
 export const Home = () => {
   return (
     <div {...stylex.props(styles.page)}>
       <MenuBar />
-
       <div {...stylex.props(styles.base)}>
-        {/* <HomeCenterDiv /> */}
-        hi this is home page
+        <HomeIntro />
+
+        <div> Another text block</div>
       </div>
     </div>
   )
@@ -24,5 +25,12 @@ const styles = stylex.create({
     color: "var(--text-color)",
   },
 
-  base: { display: "flex" },
+  base: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    height: "100%",
+    padding: "2rem",
+    // backgroundColor: "pink",
+  },
 })
