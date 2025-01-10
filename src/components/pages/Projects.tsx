@@ -30,7 +30,10 @@ export const Projects = () => {
         <MenuBar />
         <div {...stylex.props(projectStyles.base)}>
           <div {...stylex.props(styles.mainContainer)}>
-            <div {...stylex.props(styles.header)}> Projects</div>
+            <div {...stylex.props(styles.header, projectStyles.bigFont)}>
+              {" "}
+              Projects
+            </div>
 
             <div {...stylex.props(styles.projectsContainer)}>
               <ProjectCard projectData={project1} />

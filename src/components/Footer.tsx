@@ -2,9 +2,10 @@ import * as stylex from "@stylexjs/stylex"
 import MailOutlineIcon from "@mui/icons-material/MailOutline"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import GitHubIcon from "@mui/icons-material/GitHub"
+import { projectStyles } from "../tokens.stylex"
 export const Footer = () => {
   return (
-    <footer {...stylex.props(styles.base)}>
+    <footer {...stylex.props(styles.base, projectStyles.smallFont)}>
       <div {...stylex.props(styles.textSec)}>
         <div>Exploring new opportunities. </div>
         <a

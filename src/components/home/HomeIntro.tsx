@@ -29,7 +29,7 @@ export const HomeIntro = () => {
           </div>
           <div>Front-End Development</div>
           <div {...stylex.props(projectStyles.slimFont)}>
-            React, TypeScript, JavaScript, HTML, CSS, Stylex
+            React, TypeScript, JavaScript, HTML, CSS, StyleX
           </div>
           <div>Back-End Development</div>
           <div {...stylex.props(projectStyles.slimFont)}>
@@ -57,7 +57,7 @@ const styles = stylex.create({
     alignItems: "center",
   },
   center: {
-    maxWidth: "50rem",
+    maxWidth: "49rem",
     minWidth: "20rem",
   },
 

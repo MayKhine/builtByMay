@@ -27,7 +27,18 @@ export const projectStyles = stylex.create({
   bigFont: {
     fontSize: "1.2rem",
   },
+  smallFont: {
+    fontSize: ".8rem",
+  },
   slimFont: {
     fontWeight: 200,
+  },
+  link: {
+    color: {
+      default: "var(--primary-color)",
+      ":hover": "var(--secondary-color)",
+    },
+    cursor: "pointer",
+    textDecoration: "none",
   },
 })
