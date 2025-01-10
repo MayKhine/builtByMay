@@ -1,9 +1,13 @@
-import * as styleX from "@stylexjs/stylex"
+import { motion } from "motion/react"
+import * as stylex from "@stylexjs/stylex"
+import { useState } from "react"
 // import { tokens } from "../../tokens.stylex"
 export type ProjectType = {
   title: string
-  text: string
-  link: string
+  description: string
+  technologies: Array<string>
+  github?: string
+  liveLink?: string
 }
 
 type ProjectCardProps = {
@@ -11,54 +15,88 @@ type ProjectCardProps = {
 }
 
 export const ProjectCard = ({ projectData }: ProjectCardProps) => {
+  const [toggleOverlay, setToggleOverlay] = useState(false)
   return (
-    <div {...styleX.props(styles.base)}>
-      <div>
-        <a
-          href={projectData.link}
-          target="_blank"
-          {...styleX.props(styles.title)}
-        >
-          {projectData.title}
-        </a>
-      </div>
-      <div {...styleX.props(styles.subText)}> {projectData.text}</div>
+    <div
+      {...stylex.props(styles.base)}
+      onMouseEnter={() => {
+        setToggleOverlay(true)
+      }}
+      onMouseLeave={() => {
+        setToggleOverlay(false)
+      }}
+    >
       <img
-        {...styleX.props(styles.img)}
-        src="https://cdn-media-1.freecodecamp.org/images/1*Aq7TXpuzXp8lTX0Dhxw_DQ.png"
+        {...stylex.props(styles.img)}
+        src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
       ></img>
+      {toggleOverlay && (
+        <div {...stylex.props(styles.overLay)}>
+          <div {...stylex.props(styles.grayScreen)}> </div>
+          <motion.div
+            transition={{
+              // type: "spring",
+              // stiffness: 100,
+              // damping: 1,
+              ease: "easeIn",
+              duration: 0.5,
+            }}
+            initial={{
+              //  scaleY: 0
+              y: "18rem",
+            }}
+            animate={{
+              // scaleY: 1
+              y: "10rem",
+            }}
+            {...stylex.props(styles.title)}
+          >
+            {projectData.title}
+          </motion.div>
+        </div>
+      )}
     </div>
   )
 }
 
-const styles = styleX.create({
+const styles = stylex.create({
   base: {
-    // minWidth: "517px",
-    minWidth: "500px",
-
+    width: "20rem",
+    height: "20rem",
     display: "flex",
     flexDirection: "column",
-    // backgroundColor: tokens.darkBlue2,
-    // color: tokens.offWhite,
-    borderRadius: ".5rem",
+    backgroundColor: "pink",
     alignItems: "center",
-    padding: "15px",
-  },
-  textDiv: {
-    padding: "1rem",
-  },
-  title: {
-    fontWeight: "600",
     cursor: "pointer",
-    textDecorationLine: "none",
+    position: "relative",
   },
-  subText: {
-    fontSize: ".8rem",
-    fontWeight: "400",
-    fontStyle: "italic",
+  overLay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "20rem",
+    height: "20rem",
   },
+  grayScreen: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "20rem",
+    height: "20rem",
+    backgroundColor: "var(--background-color)",
+    opacity: 0.6,
+  },
+
+  title: {
+    alignSelf: "center",
+    textAlign: "center",
+    fontWeight: "600",
+  },
+
   img: {
-    // width: "10%",
-    width: "30rem",
+    width: "20rem",
+    heigth: "20rem",
+    objectFit: "cover", // cover : clip to fit, "contain" : keeps the ratio,
+    height: "20rem",
   },
 })

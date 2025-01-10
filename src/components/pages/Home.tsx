@@ -2,7 +2,6 @@ import * as stylex from "@stylexjs/stylex"
 import { MenuBar } from "../menuBar/MenuBar"
 import { HomeIntro } from "../home/HomeIntro"
 import { Footer } from "../Footer"
-import { motion } from "motion/react"
 import { SliderBar } from "../menuBar/SliderBar"
 import { projectStyles } from "../../tokens.stylex"
 

@@ -1,5 +1,6 @@
 import * as styleX from "@stylexjs/stylex"
 import { Link } from "react-router-dom"
+import { projectStyles } from "../../tokens.stylex"
 
 type MenuButtonType = {
   text: string
@@ -13,7 +14,10 @@ export const MenuButton = ({ text, onClickFn }: MenuButtonType) => {
   }
   return (
     <div {...styleX.props(styles.base)} onClick={onClickFn}>
-      <Link {...styleX.props(styles.text)} to={linkString}>
+      <Link
+        {...styleX.props(styles.text, projectStyles.slimFont)}
+        to={linkString}
+      >
         {text}
       </Link>
     </div>
@@ -30,6 +34,5 @@ const styles = styleX.create({
       default: "var(--text-color)",
       ":hover": "var(--primary-color)",
     },
-    fontWeight: "200",
   },
 })

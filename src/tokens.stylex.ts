@@ -14,12 +14,20 @@ export const projectStyles = stylex.create({
   base: {
     width: "100%",
     margin: "2rem",
-    // backgroundColor: "pink",
   },
   sliderPopUp: {
     bottom: "0",
     left: "0",
     position: "fixed",
     padding: "2rem",
+  },
+  thickFont: {
+    fontWeight: "600",
+  },
+  bigFont: {
+    fontSize: "1.2rem",
+  },
+  slimFont: {
+    fontWeight: 200,
   },
 })

@@ -7,15 +7,18 @@ import { Footer } from "../Footer"
 
 export const Projects = () => {
   const project1: ProjectType = {
-    title: "Old Portfolio Project",
-    text: "Github pages",
-    link: "https://maykhine.github.io/portfolio/",
+    title: "Project Title",
+    description: "Github pages",
+    technologies: ["React", "TypeScript", "CSS", "StyleX"],
+    github: "https://maykhine.github.io/portfolio/",
   }
 
   const project2: ProjectType = {
-    title: "Old Todo Project",
-    text: "Another Github pages",
-    link: "https://maykhine.github.io/todo-app/",
+    title:
+      "A Very VERY LONG Project TitleProject TitleProject TitleProject Title",
+    description: "Another Github pages",
+    technologies: ["React", "TypeScript", "CSS", "StyleX"],
+    github: "https://maykhine.github.io/todo-app/",
   }
   return (
     <div {...stylex.props(projectStyles.pageStyleForFooter)}>
@@ -26,9 +29,15 @@ export const Projects = () => {
       <div {...stylex.props(projectStyles.pageStyleForMenu)}>
         <MenuBar />
         <div {...stylex.props(projectStyles.base)}>
-          <ProjectCard projectData={project1} />
-          <ProjectCard projectData={project1} />
-          <ProjectCard projectData={project1} />
+          <div {...stylex.props(styles.mainContainer)}>
+            <div {...stylex.props(styles.header)}> Projects</div>
+
+            <div {...stylex.props(styles.projectsContainer)}>
+              <ProjectCard projectData={project1} />
+              <ProjectCard projectData={project2} />
+              <ProjectCard projectData={project1} />
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
@@ -37,15 +46,30 @@ export const Projects = () => {
 }
 
 const styles = stylex.create({
-  projectsDiv: {
-    marginTop: "5%",
-    width: "100%",
-    height: "100%",
+  mainContainer: {
     display: "flex",
     flexDirection: "column",
-    gap: "1rem",
-    // background: tokens.offWhite,
-    paddingBottom: "10%",
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    justifyItems: "center",
     alignItems: "center",
+    // backgroundColor: "gray",
+  },
+  header: {
+    // marginTop: "10rem",
+    width: "100%",
+    // backgroundColor: "pink",
+    textAlign: "end",
+    paddingBottom: "3rem",
+  },
+
+  projectsContainer: {
+    display: "flex",
+    width: "100%",
+    flexDirection: "row",
+    gap: "3rem",
+    flexWrap: "wrap",
+    justifyContent: "flex-end",
   },
 })

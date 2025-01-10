@@ -2,6 +2,7 @@ import * as stylex from "@stylexjs/stylex"
 import { MenuButton } from "./MenuButton"
 import { useNavigate } from "react-router-dom"
 import { motion } from "motion/react"
+import { projectStyles } from "../../tokens.stylex"
 
 export const MenuBar = () => {
   const navigate = useNavigate()
@@ -16,7 +17,11 @@ export const MenuBar = () => {
               scale: 1,
             }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            {...stylex.props(styles.logo)}
+            {...stylex.props(
+              styles.logo,
+              projectStyles.bigFont,
+              projectStyles.thickFont
+            )}
             onClick={() => {
               navigate("/")
             }}
@@ -71,8 +76,8 @@ const styles = stylex.create({
     justifyContent: "center",
     display: "flex",
     alignItems: "center",
-    fontWeight: "600",
-    fontSize: "1.2rem",
+    // fontWeight: "600",
+    // fontSize: "1.2rem",
     cursor: "pointer",
   },
   logoContainer: {
