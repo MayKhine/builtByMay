@@ -20,6 +20,9 @@ export const projectStyles = stylex.create({
   base: {
     width: "100%",
     margin: "2rem",
+    "@media (max-width: 768px)": {
+      marginTop: "9rem",
+    },
   },
   sliderPopUp: {
     bottom: "0",
@@ -53,6 +56,9 @@ export const projectStyles = stylex.create({
     "@media (max-width: 768px)": {
       display: "block",
     },
+    position: "fixed",
+    width: "100%",
+    zIndex: "1",
   },
   ipad: {
     display: "none",

@@ -9,6 +9,7 @@ import { Projects } from "./components/pages/Projects.tsx"
 import { About } from "./components/pages/About.tsx"
 
 import { ThemeProvider } from "./ThemeContext.tsx"
+import { Project } from "./components/pages/Project.tsx"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route element={<Home />} path="/"></Route>
           <Route element={<Projects />} path="/projects"></Route>
           <Route element={<About />} path="/about"></Route>
+          <Route element={<Project />} path="/projects/:title"></Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

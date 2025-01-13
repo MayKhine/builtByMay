@@ -262,11 +262,14 @@ const styles = stylex.create({
   mainContainer: {
     display: "flex",
     flexDirection: "column",
-    // width: "100%",
+    width: "100%",
     height: "100%",
     maxWidth: "70rem",
     // backgroundColor: "gray",
     justifySelf: "center",
+    alignSelf: "center",
+    // margin: "2rem",
+    // padding: "2rem",
   },
   profileImg: {
     width: "20rem",
@@ -275,8 +278,6 @@ const styles = stylex.create({
     borderRadius: "50%",
   },
   aboutMeContainer: {
-    width: "100%",
-    // backgroundColor: "pink",
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
@@ -301,10 +302,16 @@ const styles = stylex.create({
     flexDirection: "row",
     width: "100%",
     gap: "2rem",
+    "@media (max-width: 768px)": {
+      flexWrap: "wrap",
+    },
+    justifyItems: "space-between",
+    alignContent: "space-between",
+    justifyContent: "space-between",
   },
   experienceSec: {
     maxWidth: "15rem",
-    minWidth: "7rem",
+    minWidth: "5rem",
     width: "100%",
     // backgroundColor: "pink",
   },

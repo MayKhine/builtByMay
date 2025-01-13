@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Word Game",
+    "titleForLink": "word-game",
+    "description": "A small word game project built by May and Ethan",
+    "technologies": ["React", "TypeScript", "CSS", "StyleX, SQL"],
+    "github": "https://github.com/EthanSherr/word-games/",
+    "liveLink": "http://word-games.builtbymay.com/daily-pyramid",
+    "tag": ["isActive"]
+  },
+  {
+    "id": "2",
+    "title": "Wish Tree",
+    "titleForLink": "wish-tree",
+    "description": "A simple React app to help you manage your wish list and shopping list for holidays and special dates.",
+    "technologies": ["React", "TypeScript", "CSS", "StyleX", "SQL"],
+    "github": "https://github.com/MayKhine/wishtree",
+    "liveLink": "",
+    "tag": ["underConstruction"]
+  },
+  {
+    "id": "3",
+    "title": "Habit Tracker",
+    "titleForLink": "habit-tracker",
+    "description": "A simple React app to help you track your habbits. It was created for learning purposes and not maintained.",
+    "technologies": ["React", "TypeScript", "CSS", "StyleX", "SQL"],
+    "github": "https://github.com/MayKhine/habitTracker",
+    "liveLink": "",
+    "tag": ["deprecated", "learningProject"]
+  }
+]

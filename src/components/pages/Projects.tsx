@@ -1,26 +1,32 @@
 import * as stylex from "@stylexjs/stylex"
-import { ProjectCard, ProjectType } from "../project/ProjectCard"
+import { ProjectCard } from "../project/ProjectCard"
 import { projectStyles } from "../../tokens.stylex"
 import { MenuBar } from "../menu/MenuBar"
 import { SliderBar } from "../menu/SliderBar"
 import { Footer } from "../Footer"
 import { HamburgerMenu } from "../menu/HamburgerMenu"
+import { ProjectType } from "./Project"
+import projects from "../../data/projects.json"
 
 export const Projects = () => {
-  const project1: ProjectType = {
-    title: "Project Title",
-    description: "Github pages",
-    technologies: ["React", "TypeScript", "CSS", "StyleX"],
-    github: "https://maykhine.github.io/portfolio/",
-  }
+  // const project1: ProjectType = {
+  //   id: "1",
+  //   title: "Project Title",
+  //   titleForLink: "project-title",
+  //   description: "Github pages",
+  //   technologies: ["React", "TypeScript", "CSS", "StyleX"],
+  //   github: "https://maykhine.github.io/portfolio/",
+  // }
 
-  const project2: ProjectType = {
-    title:
-      "A Very VERY LONG Project TitleProject TitleProject TitleProject Title",
-    description: "Another Github pages",
-    technologies: ["React", "TypeScript", "CSS", "StyleX"],
-    github: "https://maykhine.github.io/todo-app/",
-  }
+  // const project2: ProjectType = {
+  //   id: "2",
+  //   title:
+  //     "A Very VERY LONG Project TitleProject TitleProject TitleProject Title",
+  //   titleForLink: "a-very-very-long-title",
+  //   description: "Another Github pages",
+  //   technologies: ["React", "TypeScript", "CSS", "StyleX"],
+  //   github: "https://maykhine.github.io/todo-app/",
+  // }
   return (
     <div {...stylex.props(projectStyles.pageStyleForFooter)}>
       <div {...stylex.props(projectStyles.mobile)}>
@@ -41,9 +47,9 @@ export const Projects = () => {
             </div>
 
             <div {...stylex.props(styles.projectsContainer)}>
-              <ProjectCard projectData={project1} />
-              <ProjectCard projectData={project2} />
-              <ProjectCard projectData={project1} />
+              {projects.map((project: ProjectType) => {
+                return <ProjectCard projectData={project} />
+              })}
             </div>
           </div>
         </div>
@@ -62,7 +68,6 @@ const styles = stylex.create({
     justifyContent: "center",
     justifyItems: "center",
     alignItems: "center",
-    // backgroundColor: "gray",
   },
   header: {
     // marginTop: "10rem",

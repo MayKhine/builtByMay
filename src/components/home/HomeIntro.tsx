@@ -1,5 +1,6 @@
 import * as stylex from "@stylexjs/stylex"
 import { projectStyles } from "../../tokens.stylex"
+import { Link } from "react-router-dom"
 
 export const HomeIntro = () => {
   return (
@@ -14,12 +15,19 @@ export const HomeIntro = () => {
           </div>
           <div>
             Currently, I am working on
-            <a
+            <Link
+              {...stylex.props(styles.proejctText, styles.linkedText)}
+              to={"./projects"}
+            >
+              {" "}
+              my personal projects
+            </Link>
+            {/* <a
               href={"./projects"}
               {...stylex.props(styles.proejctText, styles.linkedText)}
             >
               my personal projects
-            </a>
+            </a> */}
             to sharpen my technical skills.
           </div>
         </div>
@@ -59,7 +67,6 @@ const styles = stylex.create({
   center: {
     maxWidth: "49rem",
     minWidth: "15rem",
-    // backgroundColor: "red",
   },
 
   proejctText: {

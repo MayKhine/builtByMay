@@ -1,14 +1,9 @@
 import { motion } from "motion/react"
 import * as stylex from "@stylexjs/stylex"
 import { useState } from "react"
+import { ProjectType } from "../pages/Project"
+import { useNavigate } from "react-router-dom"
 // import { tokens } from "../../tokens.stylex"
-export type ProjectType = {
-  title: string
-  description: string
-  technologies: Array<string>
-  github?: string
-  liveLink?: string
-}
 
 type ProjectCardProps = {
   projectData: ProjectType
@@ -16,6 +11,7 @@ type ProjectCardProps = {
 
 export const ProjectCard = ({ projectData }: ProjectCardProps) => {
   const [toggleOverlay, setToggleOverlay] = useState(false)
+  const navigate = useNavigate()
   return (
     <div
       {...stylex.props(styles.base)}
@@ -25,19 +21,25 @@ export const ProjectCard = ({ projectData }: ProjectCardProps) => {
       onMouseLeave={() => {
         setToggleOverlay(false)
       }}
+      onClick={() => {
+        setToggleOverlay(true)
+      }}
     >
       <img
         {...stylex.props(styles.img)}
         src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
       ></img>
       {toggleOverlay && (
-        <div {...stylex.props(styles.overLay)}>
+        <div
+          {...stylex.props(styles.overLay)}
+          onClick={() => {
+            // console.log("OVER LAY IS CLICKED")
+            navigate(`/projects/${projectData.titleForLink}`)
+          }}
+        >
           <div {...stylex.props(styles.grayScreen)}> </div>
           <motion.div
             transition={{
-              // type: "spring",
-              // stiffness: 100,
-              // damping: 1,
               ease: "easeIn",
               duration: 0.5,
             }}
