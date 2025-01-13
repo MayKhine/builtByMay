@@ -71,6 +71,38 @@ export const Project = () => {
                 )
               })}
             </div>
+            <div {...stylex.props(styles.img)}> Image 1 </div>
+            <div {...stylex.props(styles.infoContainer)}>
+              <div {...stylex.props(styles.info)}>
+                <div>Date</div>
+                <div {...stylex.props(projectStyles.slimFont)}>Dec 2023</div>
+              </div>
+              <div {...stylex.props(styles.info)}>
+                <div>Role</div>
+                <div {...stylex.props(projectStyles.slimFont)}>Developer</div>
+              </div>
+              <div {...stylex.props(styles.info)}>
+                <div>Links</div>
+                <div
+                  {...stylex.props(
+                    projectStyles.slimFont,
+                    projectStyles.link,
+                    projectStyles.italicFont
+                  )}
+                >
+                  Live Link
+                </div>
+                <div
+                  {...stylex.props(
+                    projectStyles.slimFont,
+                    projectStyles.link,
+                    projectStyles.italicFont
+                  )}
+                >
+                  GitHub
+                </div>
+              </div>
+            </div>
             <div {...stylex.props(styles.imgContainer)}>
               <div {...stylex.props(styles.img)}> Image 1 </div>
               <div {...stylex.props(styles.img)}> Image 2 </div>
@@ -95,7 +127,7 @@ const styles = stylex.create({
     alignSelf: "center",
     justifySelf: "center",
   },
-  flexEndAlign: { alignSelf: "flex-end" },
+  flexEndAlign: { alignSelf: "flex-end", textAlign: "end" },
   header: {
     paddingTop: "3rem",
   },
@@ -104,15 +136,40 @@ const styles = stylex.create({
     flexDirection: "row",
     gap: "1rem",
   },
+  infoContainer: {
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    gap: "2rem",
+    // "@media (max-width: 768px)": {
+    //   flexWrap: "wrap",
+    // },
+    justifyContent: "space-between",
+    // backgroundColor: "lightgray",
+  },
+
+  info: {
+    // textAlign: "end",
+    alignSelf: "center",
+    // alignItems: "center",
+    textAlign: "center",
+    maxWidth: "40rem",
+    minWidth: "5rem",
+    width: "100%",
+    // backgroundColor: "pink",
+  },
+
   imgContainer: {
     display: "flex",
     flexDirection: "column",
-    gap: "2rem",
+    // gap: "2rem",
     width: " 100%",
     alignItems: "center",
   },
 
   img: {
+    marginTop: "2rem",
+    marginBottom: "2rem",
     backgroundColor: "lightgray",
     objectFit: "cover",
     "@media (max-width: 768px)": {

@@ -42,6 +42,7 @@ export const projectStyles = stylex.create({
   slimFont: {
     fontWeight: 200,
   },
+  italicFont: { fontStyle: "italic" },
   link: {
     color: {
       default: "var(--primary-color)",

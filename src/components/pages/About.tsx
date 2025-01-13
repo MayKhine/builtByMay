@@ -4,6 +4,7 @@ import * as stylex from "@stylexjs/stylex"
 import { SliderBar } from "../menu/SliderBar"
 import { Footer } from "../Footer"
 import { HamburgerMenu } from "../menu/HamburgerMenu"
+import { motion } from "motion/react"
 
 export type workExperienceType = {
   company: string
@@ -56,10 +57,26 @@ export const About = () => {
         <div {...stylex.props(projectStyles.base)}>
           <div {...stylex.props(styles.mainContainer)}>
             <div {...stylex.props(styles.aboutMeContainer)}>
-              <img
-                {...stylex.props(styles.profileImg)}
-                src="https://avatars.githubusercontent.com/u/23218423?v=4"
-              />
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { scale: 0.5 },
+                  visible: {
+                    scale: 1,
+                    transition: {
+                      duration: 0.2,
+                      ease: "easeInOut",
+                    },
+                  },
+                }}
+              >
+                <img
+                  {...stylex.props(styles.profileImg)}
+                  src="https://avatars.githubusercontent.com/u/23218423?v=4"
+                />{" "}
+              </motion.div>
+
               <div {...stylex.props(styles.aboutMeSection)}>
                 <div
                   {...stylex.props(projectStyles.bigFont, styles.marginBottom)}
