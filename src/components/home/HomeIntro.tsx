@@ -58,7 +58,8 @@ const styles = stylex.create({
   },
   center: {
     maxWidth: "49rem",
-    minWidth: "20rem",
+    minWidth: "15rem",
+    // backgroundColor: "red",
   },
 
   proejctText: {

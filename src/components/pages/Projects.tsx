@@ -1,9 +1,10 @@
 import * as stylex from "@stylexjs/stylex"
 import { ProjectCard, ProjectType } from "../project/ProjectCard"
 import { projectStyles } from "../../tokens.stylex"
-import { MenuBar } from "../menuBar/MenuBar"
-import { SliderBar } from "../menuBar/SliderBar"
+import { MenuBar } from "../menu/MenuBar"
+import { SliderBar } from "../menu/SliderBar"
 import { Footer } from "../Footer"
+import { HamburgerMenu } from "../menu/HamburgerMenu"
 
 export const Projects = () => {
   const project1: ProjectType = {
@@ -22,16 +23,20 @@ export const Projects = () => {
   }
   return (
     <div {...stylex.props(projectStyles.pageStyleForFooter)}>
+      <div {...stylex.props(projectStyles.mobile)}>
+        <HamburgerMenu />
+      </div>
       <div {...stylex.props(projectStyles.sliderPopUp)}>
         <SliderBar />
       </div>
 
       <div {...stylex.props(projectStyles.pageStyleForMenu)}>
-        <MenuBar />
+        <div {...stylex.props(projectStyles.ipad)}>
+          <MenuBar />
+        </div>
         <div {...stylex.props(projectStyles.base)}>
           <div {...stylex.props(styles.mainContainer)}>
             <div {...stylex.props(styles.header, projectStyles.bigFont)}>
-              {" "}
               Projects
             </div>
 

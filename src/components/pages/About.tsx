@@ -1,8 +1,9 @@
 import { projectStyles } from "../../tokens.stylex"
-import { MenuBar } from "../menuBar/MenuBar"
+import { MenuBar } from "../menu/MenuBar"
 import * as stylex from "@stylexjs/stylex"
-import { SliderBar } from "../menuBar/SliderBar"
+import { SliderBar } from "../menu/SliderBar"
 import { Footer } from "../Footer"
+import { HamburgerMenu } from "../menu/HamburgerMenu"
 
 export type workExperienceType = {
   company: string
@@ -41,12 +42,17 @@ const workExperiencesArr: Array<workExperienceType> = [
 export const About = () => {
   return (
     <div {...stylex.props(projectStyles.pageStyleForFooter)}>
+      <div {...stylex.props(projectStyles.mobile)}>
+        <HamburgerMenu />
+      </div>
       <div {...stylex.props(projectStyles.sliderPopUp)}>
         <SliderBar />
       </div>
 
       <div {...stylex.props(projectStyles.pageStyleForMenu)}>
-        <MenuBar />
+        <div {...stylex.props(projectStyles.ipad)}>
+          <MenuBar />
+        </div>
         <div {...stylex.props(projectStyles.base)}>
           <div {...stylex.props(styles.mainContainer)}>
             <div {...stylex.props(styles.aboutMeContainer)}>

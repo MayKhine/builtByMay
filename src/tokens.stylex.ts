@@ -5,11 +5,17 @@ export const projectStyles = stylex.create({
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
+    // minWidth: "100vw",
+    // backgroundColor: "pink",
+    // minWidth: "100vw",
+    // width: "100%",
+    // height: "100%",
   },
   pageStyleForMenu: {
     flexGrow: "1",
     display: "flex",
     flexDirection: "row",
+    // height: "100vh",
   },
   base: {
     width: "100%",
@@ -40,5 +46,18 @@ export const projectStyles = stylex.create({
     },
     cursor: "pointer",
     textDecoration: "none",
+  },
+
+  mobile: {
+    display: "none",
+    "@media (max-width: 768px)": {
+      display: "block",
+    },
+  },
+  ipad: {
+    display: "none",
+    "@media (min-width: 767px)": {
+      display: "block",
+    },
   },
 })
