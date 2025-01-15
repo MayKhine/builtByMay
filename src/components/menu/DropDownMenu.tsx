@@ -1,6 +1,7 @@
 import * as stylex from "@stylexjs/stylex"
 import { MenuButton } from "./MenuButton"
 import { motion } from "motion/react"
+import { projectStyles } from "../../tokens.stylex"
 
 type DropDownMenuType = {
   closeDropDownMenu: () => void
@@ -21,7 +22,7 @@ export const DropDownMenu = ({ closeDropDownMenu }: DropDownMenuType) => {
       }}
       {...stylex.props(styles.base)}
     >
-      <div {...stylex.props(styles.background)}> </div>
+      <div {...stylex.props(projectStyles.shadowBackground)}> </div>
       <div {...stylex.props(styles.menuButtons)}>
         <motion.div
           initial="hidden"
@@ -100,14 +101,14 @@ const styles = stylex.create({
     flexDirection: "column",
     alignItems: "flex-end",
   },
-  background: {
-    backgroundColor: "var(--secondary-color)",
-    opacity: ".2",
-    width: "100%",
-    height: "100%",
-    position: "absolute",
-    zIndex: "-1",
-  },
+  // background: {
+  //   backgroundColor: "var(--secondary-color)",
+  //   opacity: ".2",
+  //   width: "100%",
+  //   height: "100%",
+  //   position: "absolute",
+  //   zIndex: "-1",
+  // },
   menuButtons: {
     padding: "1rem",
     paddingRight: "2rem",

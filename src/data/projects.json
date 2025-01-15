@@ -7,7 +7,17 @@
     "technologies": ["React", "TypeScript", "CSS", "StyleX, SQL"],
     "github": "https://github.com/EthanSherr/word-games/",
     "liveLink": "http://word-games.builtbymay.com/daily-pyramid",
-    "tag": ["isActive"]
+    "tag": ["isActive"],
+    "images": [
+      {
+        "imageDesc": "word game main screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/Screenshot%202025-01-14%20at%202.47.23%20PM.png?raw=true"
+      },
+      {
+        "imageDesc": "word game congratulation screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/Screenshot%202025-01-14%20at%202.48.52%20PM.png?raw=true"
+      }
+    ]
   },
   {
     "id": "2",
@@ -17,7 +27,8 @@
     "technologies": ["React", "TypeScript", "CSS", "StyleX", "SQL"],
     "github": "https://github.com/MayKhine/wishtree",
     "liveLink": "",
-    "tag": ["underConstruction"]
+    "tag": ["underConstruction"],
+    "images": []
   },
   {
     "id": "3",
@@ -27,6 +38,7 @@
     "technologies": ["React", "TypeScript", "CSS", "StyleX", "SQL"],
     "github": "https://github.com/MayKhine/habitTracker",
     "liveLink": "",
-    "tag": ["deprecated", "learningProject"]
+    "tag": ["deprecated", "learningProject"],
+    "images": []
   }
 ]

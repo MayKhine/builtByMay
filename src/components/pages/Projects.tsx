@@ -9,24 +9,6 @@ import { ProjectType } from "./Project"
 import projects from "../../data/projects.json"
 
 export const Projects = () => {
-  // const project1: ProjectType = {
-  //   id: "1",
-  //   title: "Project Title",
-  //   titleForLink: "project-title",
-  //   description: "Github pages",
-  //   technologies: ["React", "TypeScript", "CSS", "StyleX"],
-  //   github: "https://maykhine.github.io/portfolio/",
-  // }
-
-  // const project2: ProjectType = {
-  //   id: "2",
-  //   title:
-  //     "A Very VERY LONG Project TitleProject TitleProject TitleProject Title",
-  //   titleForLink: "a-very-very-long-title",
-  //   description: "Another Github pages",
-  //   technologies: ["React", "TypeScript", "CSS", "StyleX"],
-  //   github: "https://maykhine.github.io/todo-app/",
-  // }
   return (
     <div {...stylex.props(projectStyles.pageStyleForFooter)}>
       <div {...stylex.props(projectStyles.mobile)}>

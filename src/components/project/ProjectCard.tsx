@@ -12,6 +12,9 @@ type ProjectCardProps = {
 export const ProjectCard = ({ projectData }: ProjectCardProps) => {
   const [toggleOverlay, setToggleOverlay] = useState(false)
   const navigate = useNavigate()
+  const projectImg = projectData.images[0]?.imageLink
+    ? projectData.images[0]?.imageLink
+    : "https://www.svgrepo.com/show/389437/sprout.svg"
   return (
     <div
       {...stylex.props(styles.base)}
@@ -25,15 +28,11 @@ export const ProjectCard = ({ projectData }: ProjectCardProps) => {
         setToggleOverlay(true)
       }}
     >
-      <img
-        {...stylex.props(styles.img)}
-        src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
-      ></img>
+      {projectImg && <img {...stylex.props(styles.img)} src={projectImg}></img>}
       {toggleOverlay && (
         <div
           {...stylex.props(styles.overLay)}
           onClick={() => {
-            // console.log("OVER LAY IS CLICKED")
             navigate(`/projects/${projectData.titleForLink}`)
           }}
         >
@@ -67,7 +66,8 @@ const styles = stylex.create({
     height: "20rem",
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "pink",
+    // backgroundColor: "pink",
+    backgroundColor: "var(--secondary-color)",
     alignItems: "center",
     cursor: "pointer",
     position: "relative",

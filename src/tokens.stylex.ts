@@ -69,4 +69,13 @@ export const projectStyles = stylex.create({
       display: "block",
     },
   },
+  shadowBackground: {
+    backgroundColor: "pink",
+    // backgroundColor: "var(--secondary-color)",
+    opacity: ".2",
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    zIndex: "-1",
+  },
 })

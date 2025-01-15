@@ -16,19 +16,22 @@ export type ProjectType = {
   github: string
   liveLink: string
   tag: Array<string>
+  images: Array<imageType>
+}
+
+type imageType = {
+  imageDesc: string
+  imageLink: string
 }
 
 export const Project = () => {
   const { title: titleForLink } = useParams<{ title: string }>()
-
   const curProject = projects.find((project: ProjectType) => {
     if (project.titleForLink === titleForLink) {
       // console.log("project", project.titleForLink, project)
       return project
     }
   })
-
-  console.log("What is this proejct: ", curProject)
 
   return (
     <div {...stylex.props(projectStyles.pageStyleForFooter)}>
@@ -58,20 +61,31 @@ export const Project = () => {
               {curProject?.description}
             </div>
             <div {...stylex.props(styles.tagText, styles.flexEndAlign)}>
-              {curProject?.tag.map((tagText: string) => {
+              {curProject?.tag.map((tagText: string, index) => {
                 return (
                   <div
                     {...stylex.props(
                       projectStyles.slimFont,
                       projectStyles.smallFont
                     )}
+                    key={index}
                   >
                     #{tagText}
                   </div>
                 )
               })}
             </div>
-            <div {...stylex.props(styles.img)}> Image 1 </div>
+
+            {curProject?.images[0]?.imageLink && (
+              <div {...stylex.props(styles.imgDiv)}>
+                <img
+                  {...stylex.props(styles.img)}
+                  src={curProject?.images[0].imageLink}
+                  alt={curProject?.images[0].imageDesc}
+                ></img>
+              </div>
+            )}
+
             <div {...stylex.props(styles.infoContainer)}>
               <div {...stylex.props(styles.info)}>
                 <div>Date</div>
@@ -83,29 +97,53 @@ export const Project = () => {
               </div>
               <div {...stylex.props(styles.info)}>
                 <div>Links</div>
-                <div
-                  {...stylex.props(
-                    projectStyles.slimFont,
-                    projectStyles.link,
-                    projectStyles.italicFont
+                <div>
+                  {curProject?.liveLink && (
+                    <a
+                      {...stylex.props(
+                        projectStyles.slimFont,
+                        projectStyles.link,
+                        projectStyles.italicFont
+                      )}
+                      href={curProject?.liveLink}
+                      target="_blank"
+                    >
+                      Live Link
+                    </a>
                   )}
-                >
-                  Live Link
                 </div>
-                <div
-                  {...stylex.props(
-                    projectStyles.slimFont,
-                    projectStyles.link,
-                    projectStyles.italicFont
+                <div>
+                  {curProject?.github && (
+                    <a
+                      {...stylex.props(
+                        projectStyles.slimFont,
+                        projectStyles.link,
+                        projectStyles.italicFont
+                      )}
+                      href={curProject?.github}
+                      target="_blank"
+                    >
+                      GitRepo
+                    </a>
                   )}
-                >
-                  GitHub
                 </div>
               </div>
             </div>
             <div {...stylex.props(styles.imgContainer)}>
-              <div {...stylex.props(styles.img)}> Image 1 </div>
-              <div {...stylex.props(styles.img)}> Image 2 </div>
+              {curProject?.images.map((image, index) => {
+                if (index == 0) {
+                  return
+                }
+                return (
+                  <div {...stylex.props(styles.imgDiv)} key={index}>
+                    <img
+                      {...stylex.props(styles.img)}
+                      src={image.imageLink}
+                      alt={image.imageDesc}
+                    ></img>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -141,22 +179,16 @@ const styles = stylex.create({
     flexDirection: "row",
     width: "100%",
     gap: "2rem",
-    // "@media (max-width: 768px)": {
-    //   flexWrap: "wrap",
-    // },
     justifyContent: "space-between",
-    // backgroundColor: "lightgray",
+    marginTop: "2rem",
   },
 
   info: {
-    // textAlign: "end",
     alignSelf: "center",
-    // alignItems: "center",
     textAlign: "center",
     maxWidth: "40rem",
     minWidth: "5rem",
     width: "100%",
-    // backgroundColor: "pink",
   },
 
   imgContainer: {
@@ -166,24 +198,32 @@ const styles = stylex.create({
     width: " 100%",
     alignItems: "center",
   },
-
-  img: {
-    marginTop: "2rem",
-    marginBottom: "2rem",
-    backgroundColor: "lightgray",
-    objectFit: "cover",
+  imgDiv: {
+    display: "flex",
+    backgroundColor: "var(--secondary-color)",
     "@media (max-width: 768px)": {
-      width: "100%",
-      maxWidth: "30rem",
-      height: "auto",
-      aspectRatio: "1",
+      width: "85%",
+      padding: "2rem",
+      marginTop: "1rem",
+      marginBottom: "1rem",
     },
     "@media (min-width: 767px)": {
-      backgroundColor: "gray",
+      maxWidth: "40rem",
+      padding: "3.5rem",
+      marginTop: "2rem",
+      marginBottom: "2rem",
+    },
+  },
+
+  img: {
+    // backgroundColor: "gray",
+    "@media (max-width: 768px)": {
       width: "100%",
-      maxWidth: "50rem",
       height: "auto",
-      aspectRatio: "1",
+    },
+    "@media (min-width: 767px)": {
+      width: "100%",
+      height: "auto",
     },
   },
 })
