@@ -48,8 +48,6 @@ const styles = stylex.create({
     position: "absolute",
     zIndex: "2",
     right: 0,
-    // top: "7rem",
     width: "100%",
-    // backgroundColor: "red",
   },
 })

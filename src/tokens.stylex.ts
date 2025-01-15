@@ -29,6 +29,8 @@ export const projectStyles = stylex.create({
     left: "0",
     position: "fixed",
     padding: "2rem",
+    zIndex: "20",
+    opacity: ".8",
   },
   thickFont: {
     fontWeight: "600",

@@ -36,6 +36,7 @@ export const Logo = () => {
 
 const styles = stylex.create({
   logo: {
+    opacity: ".8",
     width: "4rem",
     height: "4rem",
     backgroundColor: {
