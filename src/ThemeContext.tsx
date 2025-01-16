@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"
+import { createContext, ReactNode, useState } from "react"
 
 type ThemeContextType = {
   theme: string
@@ -9,7 +9,9 @@ export const ThemeContext = createContext<ThemeContextType | undefined>(
   undefined
 )
 
-export const ThemeProvider = ({ children }) => {
+export const ThemeProvider: React.FC<{ children?: ReactNode }> = ({
+  children,
+}) => {
   const [theme, setTheme] = useState<string>("white")
 
   const toggleTheme = (color: string) => {
