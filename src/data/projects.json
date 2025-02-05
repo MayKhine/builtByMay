@@ -26,12 +26,12 @@
     "tag": ["isActive", "completed"],
     "images": [
       {
-        "imageDesc": "Word game main screen",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/Screenshot%202025-01-14%20at%202.47.23%20PM.png?raw=true"
+        "imageDesc": "Word Pyramid gameplay screen",
+        "imageLink": ""
       },
       {
-        "imageDesc": "Word game congratulation screen",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/Screenshot%202025-01-14%20at%202.48.52%20PM.png?raw=true"
+        "imageDesc": "Word Pyramid gameplay screen",
+        "imageLink": ""
       }
     ]
   },
@@ -88,7 +88,7 @@
     "tag": ["isActive", "completed"],
     "images": [
       {
-        "imageDesc": "Minesweeper  gameplay screen",
+        "imageDesc": "Minesweeper gameplay screen",
         "imageLink": ""
       }
     ]
