@@ -6,7 +6,8 @@ import { HamburgerMenu } from "../menu/HamburgerMenu"
 import { SliderBar } from "../menu/SliderBar"
 import { useParams } from "react-router-dom"
 import projects from "../../data/projects.json"
-
+import { motion } from "motion/react"
+// import { useTheme } from "../../ThemeContext"
 export type ProjectType = {
   id: string
   title: string
@@ -32,6 +33,8 @@ export const Project = () => {
       return project
     }
   })
+  // const tempTheme = useTheme()
+  // console.log("thee: ", tempTheme)
 
   return (
     <div {...stylex.props(projectStyles.pageStyleForFooter)}>
@@ -64,14 +67,48 @@ export const Project = () => {
                 projectStyles.bigFont,
                 styles.projectLiveLinkContainer
               )}
+              onClick={() => {
+                window.open(curProject?.liveLink, "_blank")
+              }}
             >
-              <a
+              <div>
+                <div {...stylex.props(styles.redDotContainer)}>
+                  <motion.div
+                    style={{
+                      borderRadius: "50%",
+                      backgroundColor: "red",
+                      width: ".8rem", // Size of the red dot
+                      height: ".8rem", // Size of the red dot
+                    }}
+                    animate="visible"
+                    variants={{
+                      visible: {
+                        boxShadow: [
+                          "0 0 8px rgba(255, 0, 0, 1)", // Initial subtle glow
+                          "0 0 15px rgba(255, 0, 0, 0.8)", // Expanding glow
+                          "0 0 25px rgba(255, 0, 0, 0.6)", // Glowing rays expanding
+                          "0 0 50px rgba(255, 0, 0, 0.4)", // Soft, wide red rays
+                          "0 0 80px rgba(255, 0, 0, 0.2)", // Even wider rays
+                        ],
+                        transition: {
+                          duration: 1.5, // Duration for one complete cycle of pulsation
+                          ease: "easeInOut",
+                          repeat: Infinity, // Continuous pulsation
+                          repeatType: "loop", // Looping without reversing
+                        },
+                      },
+                    }}
+                  ></motion.div>
+                </div>
+              </div>
+              <div> Live Link</div>
+              {/* <a
                 {...stylex.props(styles.projectLiveLink)}
                 href={curProject?.liveLink}
                 target="_blank"
               >
                 Live Link
-              </a>
+              </a> */}
             </div>
             <div {...stylex.props(styles.flexEndAlign, projectStyles.slimFont)}>
               {curProject?.description}
@@ -237,6 +274,9 @@ const styles = stylex.create({
     marginTop: ".5rem",
     marginBottom: ".5rem",
     padding: ".5rem",
+    display: "flex",
+    alignItems: "center",
+    cursor: "pointer",
   },
   projectLiveLink: {
     textDecoration: "none",
@@ -245,6 +285,16 @@ const styles = stylex.create({
       ":hover": "darkgreen",
     },
   },
+
+  redDotContainer: {
+    width: "2rem",
+    height: "2rem",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    // backgroundColor: "green",
+  },
+
   goalFeatureContainer: {
     marginTop: "2rem",
     display: "flex",
