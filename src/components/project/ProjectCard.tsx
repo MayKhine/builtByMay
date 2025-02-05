@@ -14,7 +14,7 @@ export const ProjectCard = ({ projectData }: ProjectCardProps) => {
   const navigate = useNavigate()
   const projectImg = projectData.images[0]?.imageLink
     ? projectData.images[0]?.imageLink
-    : "https://www.svgrepo.com/show/389437/sprout.svg"
+    : ""
   return (
     <div
       {...stylex.props(styles.base)}
@@ -28,7 +28,17 @@ export const ProjectCard = ({ projectData }: ProjectCardProps) => {
         setToggleOverlay(true)
       }}
     >
-      {projectImg && <img {...stylex.props(styles.img)} src={projectImg}></img>}
+      {projectImg.length > 0 && (
+        <img {...stylex.props(styles.img)} src={projectImg}></img>
+      )}
+
+      {projectImg.length == 0 && (
+        <img
+          {...stylex.props(styles.img2)}
+          src="https://www.svgrepo.com/show/389437/sprout.svg"
+        ></img>
+      )}
+
       {toggleOverlay && (
         <div
           {...stylex.props(styles.overLay)}
@@ -70,6 +80,7 @@ const styles = stylex.create({
     alignItems: "center",
     cursor: "pointer",
     position: "relative",
+    border: "1px solid var(--primary-color)",
   },
   overLay: {
     position: "absolute",
@@ -99,5 +110,15 @@ const styles = stylex.create({
     heigth: "20rem",
     objectFit: "cover", // cover : clip to fit, "contain" : keeps the ratio,
     height: "20rem",
+    backgroundColor: "var(--secondary-color)",
+  },
+  img2: {
+    width: "30%",
+    heigth: "30%",
+    height: "20rem",
+    // fill: "green",
+    // stroke: "green",
+    // color: "green",
+    backgroundColor: "var(--secondary-color)",
   },
 })

@@ -52,10 +52,26 @@ export const Project = () => {
               {...stylex.props(
                 styles.header,
                 styles.flexEndAlign,
-                projectStyles.bigFont
+                projectStyles.projectTitle
               )}
             >
               {curProject?.title}
+            </div>
+
+            <div
+              {...stylex.props(
+                styles.flexEndAlign,
+                projectStyles.bigFont,
+                styles.projectLiveLinkContainer
+              )}
+            >
+              <a
+                {...stylex.props(styles.projectLiveLink)}
+                href={curProject?.liveLink}
+                target="_blank"
+              >
+                Live Link
+              </a>
             </div>
             <div {...stylex.props(styles.flexEndAlign, projectStyles.slimFont)}>
               {curProject?.description}
@@ -86,15 +102,53 @@ export const Project = () => {
               </div>
             )}
 
+            <div {...stylex.props(styles.goalFeatureContainer)}>
+              <div>
+                <div>Project Goal</div>
+                <div {...stylex.props(projectStyles.slimFont)}>
+                  {curProject?.goal}
+                </div>
+              </div>
+              <div>
+                <div>Project Features</div>
+                <div {...stylex.props(projectStyles.slimFont)}>
+                  {curProject?.features.map((eachFeature) => {
+                    return <div> {eachFeature} </div>
+                  })}
+                </div>
+              </div>
+
+              <div>
+                <div>Contributors</div>
+                <div>
+                  {curProject?.contributors.map((eachPerson) => {
+                    return (
+                      <div>
+                        <div {...stylex.props(projectStyles.slimFont)}>
+                          {eachPerson.name}, {eachPerson.role}
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            </div>
             <div {...stylex.props(styles.infoContainer)}>
               <div {...stylex.props(styles.info)}>
-                <div>Date</div>
-                <div {...stylex.props(projectStyles.slimFont)}>Dec 2023</div>
+                <div>Technologies</div>
+                <div {...stylex.props(projectStyles.slimFont)}>
+                  {curProject?.technologies.map((eachTech) => {
+                    return <div> {eachTech} </div>
+                  })}
+                </div>
               </div>
               <div {...stylex.props(styles.info)}>
-                <div>Role</div>
-                <div {...stylex.props(projectStyles.slimFont)}>Developer</div>
+                <div>Date</div>
+                <div {...stylex.props(projectStyles.slimFont)}>
+                  {curProject?.date}
+                </div>
               </div>
+
               <div {...stylex.props(styles.info)}>
                 <div>Links</div>
                 <div>
@@ -129,6 +183,7 @@ export const Project = () => {
                 </div>
               </div>
             </div>
+
             <div {...stylex.props(styles.imgContainer)}>
               {curProject?.images.map((image, index) => {
                 if (index == 0) {
@@ -174,56 +229,72 @@ const styles = stylex.create({
     flexDirection: "row",
     gap: "1rem",
   },
-  infoContainer: {
+
+  projectLiveLinkContainer: {
+    color: "green",
+    backgroundColor: "white",
+    border: "1px solid var(--primary-color)",
+    marginTop: ".5rem",
+    marginBottom: ".5rem",
+    padding: ".5rem",
+  },
+  projectLiveLink: {
+    textDecoration: "none",
+    color: {
+      default: "green",
+      ":hover": "darkgreen",
+    },
+  },
+  goalFeatureContainer: {
+    marginTop: "2rem",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     width: "100%",
     gap: "2rem",
-    justifyContent: "space-between",
+  },
+
+  infoContainer: {
+    display: "flex",
+    width: "100%",
     marginTop: "2rem",
+    gap: "1rem",
+    // backgroundColor: "red",
   },
 
   info: {
-    alignSelf: "center",
-    textAlign: "center",
-    maxWidth: "40rem",
     minWidth: "5rem",
-    width: "100%",
+    width: "30%",
+    alignSelf: "flex-start",
+    // backgroundColor: "pink",
   },
 
   imgContainer: {
     display: "flex",
     flexDirection: "column",
-    // gap: "2rem",
     width: " 100%",
     alignItems: "center",
   },
+
   imgDiv: {
     display: "flex",
     backgroundColor: "var(--secondary-color)",
+    // border: "1px solid black",
+    border: "1px solid var(--primary-color)",
+
     "@media (max-width: 768px)": {
       width: "85%",
-      padding: "2rem",
-      marginTop: "1rem",
+      marginTop: "2rem",
       marginBottom: "1rem",
     },
-    "@media (min-width: 767px)": {
+    "@media (min-width: 769px)": {
       maxWidth: "40rem",
-      padding: "3.5rem",
-      marginTop: "2rem",
+      marginTop: "3rem",
       marginBottom: "2rem",
     },
   },
 
   img: {
-    // backgroundColor: "gray",
-    "@media (max-width: 768px)": {
-      width: "100%",
-      height: "auto",
-    },
-    "@media (min-width: 767px)": {
-      width: "100%",
-      height: "auto",
-    },
+    width: "100%",
+    height: "auto",
   },
 })

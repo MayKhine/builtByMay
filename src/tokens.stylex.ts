@@ -5,11 +5,6 @@ export const projectStyles = stylex.create({
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-    // minWidth: "100vw",
-    // backgroundColor: "pink",
-    // minWidth: "100vw",
-    // width: "100%",
-    // height: "100%",
   },
   pageStyleForMenu: {
     flexGrow: "1",
@@ -41,6 +36,7 @@ export const projectStyles = stylex.create({
   smallFont: {
     fontSize: ".8rem",
   },
+  projectTitle: { fontSize: "2rem" },
   slimFont: {
     fontWeight: 200,
   },

@@ -3,21 +3,22 @@
     "id": "1",
     "title": "Word Pyramid",
     "titleForLink": "word-game",
-    "description": "A strategic word game inspired by pyramid structures.",
-    "goal": "To create a responsive and strategic word puzzle game.",
+    "description": "A strategic word game inspired by pyramid structures",
+    "goal": "To create a responsive and strategic word puzzle game",
     "features": [
       "Pyramid structure for word creation",
       "Daily challenge mode",
       "Responsive design"
     ],
+    "date": "Dec 2024",
     "contributors": [
+      {
+        "name": "May Myo Khine",
+        "role": "Frontend Developer"
+      },
       {
         "name": "Ethan Sherr",
         "role": "Backend Developer"
-      },
-      {
-        "name": "May Myo Khine",
-        "role": "Front-End Developer"
       }
     ],
     "technologies": ["React", "TypeScript", "CSS", "StyleX", "SQL"],
@@ -43,47 +44,21 @@
       }
     ]
   },
+
   {
     "id": "2",
-    "title": "Wish Tree",
-    "titleForLink": "wish-tree",
-    "description": "A simple, responsive platform to help users manage their wish lists and shopping lists for holidays and special dates.",
-    "goal": "To create an interactive and user-friendly platform for users to create, track, and share their wishes.",
-    "features": [
-      "Create custom wish lists for special dates (e.g., birthdays, holidays)",
-      "Wish tracking: users can track the status of their wishes to avoid duplicate gifts",
-      "Wish fulfillment: option to mark wishes as completed",
-      "User profiles: users can have personalized profiles to keep track of their wishes",
-      "Special dates reminder: reminders for upcoming important dates and wishes"
-    ],
-    "contributors": [
-      {
-        "name": "Ethan Sherr",
-        "role": "Backend Developer"
-      },
-      {
-        "name": "May Myo Khine",
-        "role": "Front-End Developer"
-      }
-    ],
-    "technologies": ["React", "TypeScript", "CSS", "StyleX", "SQL"],
-    "github": "https://github.com/MayKhine/wishtree",
-    "liveLink": "",
-    "tag": ["underConstruction"],
-    "images": []
-  },
-  {
-    "id": "3",
     "title": "Minesweeper",
     "titleForLink": "minesweeper",
-    "description": "A classic Minesweeper game.",
-    "goal": "To create a responsive Minesweeper game.",
+    "description": "A classic Minesweeper game",
+    "goal": "To create a responsive Minesweeper game",
     "features": [
       "Responsive design: adapts to different screen sizes for a smooth experience on all devices",
       "Options to change grid size: users can customize the grid size for different difficulty levels",
       "Game difficulty options: players can select from easy, medium, or hard difficulty",
-      "Flagging for mobile: an option to flag cells on small-screen devices where right-click is not available"
+      "Flagging for mobile: an option to flag cells on small-screen devices where right-click is not available",
+      "Win/Loss count: displays the number of wins and losses for the player"
     ],
+    "date": "Jan 2025",
     "contributors": [
       {
         "name": "May Myo Khine",
@@ -97,16 +72,32 @@
     "images": [
       {
         "imageDesc": "Minesweeper gameplay screen",
-        "imageLink": ""
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/minesweeper/minesweeper1.png?raw=true"
+      },
+      {
+        "imageDesc": "Minesweeper gameplay screen showing game size option",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/minesweeper/minesweeper2.png?raw=true"
+      },
+      {
+        "imageDesc": "Minesweeper gameplay screen during active play",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/minesweeper/minesweeper4.png?raw=true"
+      },
+      {
+        "imageDesc": "Minesweeper gameplay screen showing game over",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/minesweeper/minesweeper5.png?raw=true"
+      },
+      {
+        "imageDesc": "Minesweeper gameplay screen showing the flag option on a small-screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/minesweeper/minesweeper6.png?raw=true"
       }
     ]
   },
   {
-    "id": "4",
+    "id": "3",
     "title": "TileTactics",
     "titleForLink": "tiletactics",
-    "description": "A Kulami-inspired strategic tile game where players place and move tiles to create patterns and block opponents.",
-    "goal": "To recreate the strategy and tactical depth of Kulami with modern digital features and a responsive design.",
+    "description": "A Kulami-inspired strategic tile game where players place and move tiles to create patterns and block opponents",
+    "goal": "To recreate the strategy and tactical depth of Kulami with modern digital features and a responsive design",
     "features": [
       "Turn-based gameplay: players take turns to place and move tiles",
       "Show possible moves: highlights valid tile placements for players to consider",
@@ -114,6 +105,7 @@
       "Marble count: keep track of how many marbles each player has placed or captured",
       "Responsive design: optimized for desktop and mobile devices"
     ],
+    "date": "Jan 2025",
     "contributors": [
       {
         "name": "May Myo Khine",
@@ -127,8 +119,46 @@
     "images": [
       {
         "imageDesc": "TileTactics gameplay screen",
-        "imageLink": ""
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/tileTactics/tileTactics1.png?raw=true"
+      },
+      {
+        "imageDesc": "TileTactics gameplay screen during active game play ",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/tileTactics/tileTactics2.png?raw=true"
+      },
+      {
+        "imageDesc": "TileTactics gameplay screen during active game play, showing the possible moves ",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/tileTactics/tileTactics3.png?raw=true"
       }
     ]
+  },
+  {
+    "id": "4",
+    "title": "Wish Tree",
+    "titleForLink": "wish-tree",
+    "description": "A simple, responsive platform to help users manage their wish lists and shopping lists for holidays and special dates",
+    "goal": "To create an interactive and user-friendly platform for users to create, track, and share their wishes",
+    "features": [
+      "Create custom wish lists for special dates (e.g., birthdays, holidays)",
+      "Wish tracking: users can track the status of their wishes to avoid duplicate gifts",
+      "Wish fulfillment: option to mark wishes as completed",
+      "User profiles: users can have personalized profiles to keep track of their wishes",
+      "Special dates reminder: reminders for upcoming important dates and wishes"
+    ],
+    "date": "Jan 2025",
+    "contributors": [
+      {
+        "name": "May Myo Khine",
+        "role": "Frontend Developer"
+      },
+      {
+        "name": "Ethan Sherr",
+        "role": "Backend Developer"
+      }
+    ],
+    "technologies": ["React", "TypeScript", "CSS", "StyleX", "SQL"],
+    "github": "https://github.com/MayKhine/wishtree",
+    "liveLink": "",
+    "tag": ["underConstruction"],
+    "images": []
   }
 ]
