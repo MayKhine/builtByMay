@@ -46,8 +46,6 @@ const styles = stylex.create({
     gap: ".5rem",
     padding: "2rem",
     paddingRight: "5rem",
-    // justifyContent: "space-between",
-    // backgroundColor: "white",
   },
   logoContainer: {
     height: "7rem",

@@ -74,7 +74,7 @@ export const About = () => {
                 <img
                   {...stylex.props(styles.profileImg)}
                   src="https://avatars.githubusercontent.com/u/23218423?v=4"
-                />{" "}
+                />
               </motion.div>
 
               <div {...stylex.props(styles.aboutMeSection)}>
@@ -83,6 +83,7 @@ export const About = () => {
                 >
                   Hello, I am May Myo Khine.
                 </div>
+
                 <div
                   {...stylex.props(
                     projectStyles.smallFont,
@@ -123,6 +124,17 @@ export const About = () => {
                   )}
                 >
                   Thank you for visiting! I'd love to connect and hear from you!
+                </div>
+
+                <div>
+                  <a
+                    {...stylex.props(styles.resumeDownload)}
+                    href="src/data/MayKhine_resume.pdf"
+                    download="MayMKhine_Developer_Resume.pdf"
+                    // target="_blank"
+                  >
+                    <div>Download My Resume</div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -335,5 +347,14 @@ const styles = stylex.create({
   connectSec: {
     display: "flex",
     flexDirection: "column",
+  },
+  resumeDownload: {
+    cursor: "pointer",
+
+    textDecoration: "none",
+    color: {
+      default: "var(--text-color)",
+      ":hover": "var(--primary-color)",
+    },
   },
 })
