@@ -66,7 +66,6 @@ const styles = stylex.create({
     height: "20rem",
     display: "flex",
     flexDirection: "column",
-    // backgroundColor: "pink",
     backgroundColor: "var(--secondary-color)",
     alignItems: "center",
     cursor: "pointer",

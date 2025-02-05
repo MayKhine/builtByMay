@@ -26,12 +26,20 @@
     "tag": ["isActive", "completed"],
     "images": [
       {
-        "imageDesc": "Word Pyramid gameplay screen",
-        "imageLink": ""
+        "imageDesc": "Word Pyramid main gameplay screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid1.png?raw=true"
       },
       {
-        "imageDesc": "Word Pyramid gameplay screen",
-        "imageLink": ""
+        "imageDesc": "Word Pyramid gameplay screen during active play",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid2.png?raw=true"
+      },
+      {
+        "imageDesc": "Word Pyramid congratulation screen after winning, with sign-up prompts",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid3.png?raw=true"
+      },
+      {
+        "imageDesc": "Word Pyramid gameplay screen with prompt to return tomorrow for a new puzzle",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid4.png?raw=true"
       }
     ]
   },
