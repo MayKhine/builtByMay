@@ -5,7 +5,6 @@ import { SliderBar } from "../menu/SliderBar"
 import { Footer } from "../Footer"
 import { HamburgerMenu } from "../menu/HamburgerMenu"
 import { motion } from "motion/react"
-
 export type workExperienceType = {
   company: string
   role: string
@@ -129,9 +128,8 @@ export const About = () => {
                 <div>
                   <a
                     {...stylex.props(styles.resumeDownload)}
-                    href="src/data/MayKhine_resume.pdf"
+                    href="/src/data/resume.pdf"
                     download="MayMKhine_Developer_Resume.pdf"
-                    // target="_blank"
                   >
                     <div>Download My Resume</div>
                   </a>
