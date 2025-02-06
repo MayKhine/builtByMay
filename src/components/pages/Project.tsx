@@ -61,55 +61,50 @@ export const Project = () => {
               {curProject?.title}
             </div>
 
-            <div
-              {...stylex.props(
-                styles.flexEndAlign,
-                projectStyles.bigFont,
-                styles.projectLiveLinkContainer
-              )}
-              onClick={() => {
-                window.open(curProject?.liveLink, "_blank")
-              }}
-            >
-              <div>
-                <div {...stylex.props(styles.redDotContainer)}>
-                  <motion.div
-                    style={{
-                      borderRadius: "50%",
-                      backgroundColor: "red",
-                      width: ".8rem", // Size of the red dot
-                      height: ".8rem", // Size of the red dot
-                    }}
-                    animate="visible"
-                    variants={{
-                      visible: {
-                        boxShadow: [
-                          "0 0 8px rgba(255, 0, 0, 1)", // Initial subtle glow
-                          "0 0 15px rgba(255, 0, 0, 0.8)", // Expanding glow
-                          "0 0 25px rgba(255, 0, 0, 0.6)", // Glowing rays expanding
-                          "0 0 50px rgba(255, 0, 0, 0.4)", // Soft, wide red rays
-                          "0 0 80px rgba(255, 0, 0, 0.2)", // Even wider rays
-                        ],
-                        transition: {
-                          duration: 1.5, // Duration for one complete cycle of pulsation
-                          ease: "easeInOut",
-                          repeat: Infinity, // Continuous pulsation
-                          repeatType: "loop", // Looping without reversing
-                        },
-                      },
-                    }}
-                  ></motion.div>
-                </div>
-              </div>
-              <div> Live Link</div>
-              {/* <a
-                {...stylex.props(styles.projectLiveLink)}
-                href={curProject?.liveLink}
-                target="_blank"
+            {curProject?.liveLink && (
+              <div
+                {...stylex.props(
+                  styles.flexEndAlign,
+                  projectStyles.bigFont,
+                  styles.projectLiveLinkContainer
+                )}
+                onClick={() => {
+                  window.open(curProject?.liveLink, "_blank")
+                }}
               >
-                Live Link
-              </a> */}
-            </div>
+                <div>
+                  <div {...stylex.props(styles.redDotContainer)}>
+                    <motion.div
+                      style={{
+                        borderRadius: "50%",
+                        backgroundColor: "red",
+                        width: ".8rem", // Size of the red dot
+                        height: ".8rem", // Size of the red dot
+                      }}
+                      animate="visible"
+                      variants={{
+                        visible: {
+                          boxShadow: [
+                            "0 0 8px rgba(255, 0, 0, 1)", // Initial subtle glow
+                            "0 0 15px rgba(255, 0, 0, 0.8)", // Expanding glow
+                            "0 0 25px rgba(255, 0, 0, 0.6)", // Glowing rays expanding
+                            "0 0 50px rgba(255, 0, 0, 0.4)", // Soft, wide red rays
+                            "0 0 80px rgba(255, 0, 0, 0.2)", // Even wider rays
+                          ],
+                          transition: {
+                            duration: 1.5, // Duration for one complete cycle of pulsation
+                            ease: "easeInOut",
+                            repeat: Infinity, // Continuous pulsation
+                            repeatType: "loop", // Looping without reversing
+                          },
+                        },
+                      }}
+                    ></motion.div>
+                  </div>
+                </div>
+                <div> Live Link</div>
+              </div>
+            )}
             <div {...stylex.props(styles.flexEndAlign, projectStyles.slimFont)}>
               {curProject?.description}
             </div>
