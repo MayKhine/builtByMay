@@ -128,8 +128,8 @@ export const About = () => {
                 <div>
                   <a
                     {...stylex.props(styles.resumeDownload)}
-                    href="/src/data/resume.pdf"
-                    download="MayMKhine_Developer_Resume.pdf"
+                    href="/src/data/MayMyoKhine_Developer_Resume.pdf"
+                    download="MayMyoKhine_Developer_Resume.pdf"
                   >
                     <div>Download My Resume</div>
                   </a>
@@ -147,9 +147,9 @@ export const About = () => {
                   </div>
                   <div>Bachelor of Science</div>
                   <div>Major in Computer Science</div>
-                  <div>Minor in Computer Science</div>
+                  <div>Minor in Art</div>
 
-                  <div>Cumulative GPA 3.9 / 4.0</div>
+                  <div>GPA 3.9 / 4.0</div>
                 </div>
               </div>
               <div {...stylex.props(styles.experienceSec)}>
