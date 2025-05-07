@@ -17,7 +17,7 @@
     "contributors": [
       {
         "name": "May Myo Khine",
-        "role": "Frontend Developer"
+        "role": "Developer"
       }
     ],
     "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "AI"],
@@ -208,20 +208,21 @@
     "title": "Crown'd",
     "titleForLink": "crownd",
     "description": "A strategic puzzle game where players place crown puzzle blocks on a grid to meet the win condition.",
-    "goal": "To create a fun and engaging puzzle game inspired by the LinkedIn game I played and enjoyed. I thought, 'Why just play it when I can also build it?'",
+    "goal": "To create a fun and engaging puzzle game inspired by the LinkedIn Queens game I played and enjoyed. I thought, 'Why just play it when I can also build it?'",
     "features": [
-      "Puzzle grid: a grid where players place crowns and X marks",
-      "Win condition: place exactly one crown in each row, column, and color region",
-      "Tap twice to place a crown, once to place an X marking where a crown can't go",
-      "No touching crowns: crowns cannot touch each other, even diagonally",
-      "Interactive gameplay: turn-based, offering a challenge in every move",
-      "Responsive design: optimized for desktop and mobile users"
+      "Interactive puzzle grid for placing crowns and X marks",
+      "Win condition: exactly one crown per row, column, and color region",
+      "Left-click to place a crown; right-click to place an X (invalid spot)",
+      "Crown placement rule: crowns cannot touch, even diagonally",
+      "Challenging gameplay: each move presents a new strategic decision",
+      "Built-in timer to track performance",
+      "Responsive design for seamless play on desktop and mobile"
     ],
     "date": "Apr 2025",
     "contributors": [
       {
         "name": "May Myo Khine",
-        "role": "Lead Developer"
+        "role": "Developer"
       }
     ],
     "technologies": ["React", "TypeScript", "CSS", "StyleX"],
