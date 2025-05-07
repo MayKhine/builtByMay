@@ -160,5 +160,31 @@
     "liveLink": "",
     "tag": ["underConstruction"],
     "images": []
+  },
+  {
+    "id": "5",
+    "title": "Bite Bot",
+    "titleForLink": "bite-bot",
+    "description": "An AI-powered recipe assistant that helps users discover recipes based on the ingredients they have on hand",
+    "goal": "To build a responsive, AI-enhanced platform that supports users in efficient meal planning by suggesting relevant recipes. I created it because I enjoy cooking and thought it would be fun—plus, I often find myself unsure of what to make with my in-stock groceries.",
+    "features": [
+      "AI recipe suggestions: recommends recipes based on selected ingredients using intelligent filtering",
+      "Ingredient dropdown: users can select ingredients from an A–Z list",
+      "Smart matching: filters recipes that contain all or most of the chosen ingredients",
+      "Responsive design: optimized for both mobile and desktop users",
+      "Performance-first development: built with Vite for fast load times and smooth user experience"
+    ],
+    "date": "May 2025",
+    "contributors": [
+      {
+        "name": "May Myo Khine",
+        "role": "Frontend Developer"
+      }
+    ],
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "AI"],
+    "github": "https://github.com/MayKhine/bite-bot",
+    "liveLink": "https://bitebot.builtbymay.com/",
+    "tag": ["isActive"],
+    "images": []
   }
 ]
