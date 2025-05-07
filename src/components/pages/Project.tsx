@@ -18,6 +18,7 @@ export type ProjectType = {
   liveLink: string
   tag: Array<string>
   images: Array<imageType>
+  projectImg?: string
 }
 
 type imageType = {

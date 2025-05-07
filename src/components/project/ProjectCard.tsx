@@ -12,7 +12,9 @@ type ProjectCardProps = {
 export const ProjectCard = ({ projectData }: ProjectCardProps) => {
   const [toggleOverlay, setToggleOverlay] = useState(false)
   const navigate = useNavigate()
-  const projectImg = projectData.images[0]?.imageLink
+  const projectImg = projectData.projectImg
+    ? projectData.projectImg
+    : projectData.images[0]?.imageLink
     ? projectData.images[0]?.imageLink
     : ""
   return (

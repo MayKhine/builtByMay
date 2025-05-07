@@ -129,7 +129,6 @@ export const About = () => {
                   <a
                     {...stylex.props(styles.resumeDownload)}
                     href="/MayMyoKhine_Developer_Resume.pdf"
-                    // href="https://github.com/MayKhine/builtByMay/blob/main/src/data/MayMyoKhine_Developer_Resume.pdf"
                     download="MayMyoKhine_Developer_Resume.pdf"
                   >
                     <div>Download My Resume</div>

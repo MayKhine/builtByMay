@@ -1,52 +1,86 @@
 [
   {
     "id": "1",
-    "title": "Word Pyramid",
-    "titleForLink": "word-game",
-    "description": "A strategic word game inspired by pyramid structures",
-    "goal": "To create a responsive and strategic word puzzle game",
+    "title": "Bite Bot",
+    "titleForLink": "bite-bot",
+    "description": "An AI-powered recipe assistant that helps users discover recipes based on the ingredients they have on hand",
+    "goal": "To build a responsive, AI-enhanced platform that supports users in efficient meal planning by suggesting relevant recipes. I created it because I enjoy cooking and thought it would be fun—plus, I often find myself unsure of what to make with my in-stock groceries.",
     "features": [
-      "Pyramid structure for word creation",
-      "Daily challenge mode",
-      "Responsive design"
+      "AI recipe suggestions: recommends recipes based on selected ingredients using intelligent filtering",
+      "Ingredient dropdown: users can select ingredients from an A–Z list",
+      "Smart matching: filters recipes that contain all or most of the chosen ingredients",
+      "Responsive design: optimized for both mobile and desktop users",
+      "Performance-first development: built with Vite for fast load times and smooth user experience",
+      "😊 Custom Lottie animation: designed and created entirely by me to add a fun and engaging touch "
     ],
-    "date": "Dec 2024",
+    "date": "May 2025",
     "contributors": [
       {
         "name": "May Myo Khine",
         "role": "Frontend Developer"
-      },
-      {
-        "name": "Ethan Sherr",
-        "role": "Backend Developer"
       }
     ],
-    "technologies": ["React", "TypeScript", "CSS", "StyleX", "SQL"],
-    "github": "https://github.com/EthanSherr/word-games/",
-    "liveLink": "http://word-games.builtbymay.com/daily-pyramid",
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "AI"],
+    "github": "https://github.com/MayKhine/bite-bot",
+    "liveLink": "https://bitebot.builtbymay.com/",
+    "tag": ["isActive"],
+    "images": [
+      {
+        "imageDesc": "biteBot screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/biteBot1.png?raw=true"
+      },
+      {
+        "imageDesc": "biteBot screen during ingredient look up",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/biteBot2.png?raw=true"
+      },
+      {
+        "imageDesc": "biteBot screen showing recommended recipe",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/biteBot3.png?raw=true"
+      }
+    ],
+    "projectImg": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/project.png?raw=true"
+  },
+  {
+    "id": "2",
+    "title": "TileTactics",
+    "titleForLink": "tiletactics",
+    "description": "A Kulami-inspired strategic tile game where players place and move tiles to create patterns and block opponents",
+    "goal": "To recreate the strategy and tactical depth of Kulami with modern digital features and a responsive design",
+    "features": [
+      "Turn-based gameplay: players take turns to place and move tiles",
+      "Show possible moves: highlights valid tile placements for players to consider",
+      "Restart option: option to restart the game and play again from the beginning",
+      "Marble count: keep track of how many marbles each player has placed or captured",
+      "Responsive design: optimized for desktop and mobile devices"
+    ],
+    "date": "Jan 2025",
+    "contributors": [
+      {
+        "name": "May Myo Khine",
+        "role": "Lead Developer"
+      }
+    ],
+    "technologies": ["React", "TypeScript", "CSS", "StyleX"],
+    "github": "https://github.com/YourUsername/tiletactics",
+    "liveLink": "http://tiletactics.builtbymay.com/",
     "tag": ["isActive", "completed"],
     "images": [
       {
-        "imageDesc": "Word Pyramid main gameplay screen",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid1.png?raw=true"
+        "imageDesc": "TileTactics gameplay screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/tileTactics/tileTactics1.png?raw=true"
       },
       {
-        "imageDesc": "Word Pyramid gameplay screen during active play",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid2.png?raw=true"
+        "imageDesc": "TileTactics gameplay screen during active game play ",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/tileTactics/tileTactics2.png?raw=true"
       },
       {
-        "imageDesc": "Word Pyramid congratulation screen after winning, with sign-up prompts",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid3.png?raw=true"
-      },
-      {
-        "imageDesc": "Word Pyramid gameplay screen with prompt to return tomorrow for a new puzzle",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid4.png?raw=true"
+        "imageDesc": "TileTactics gameplay screen during active game play, showing the possible moves ",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/tileTactics/tileTactics3.png?raw=true"
       }
     ]
   },
-
   {
-    "id": "2",
+    "id": "3",
     "title": "Minesweeper",
     "titleForLink": "minesweeper",
     "description": "A classic Minesweeper game",
@@ -92,47 +126,54 @@
       }
     ]
   },
+
   {
-    "id": "3",
-    "title": "TileTactics",
-    "titleForLink": "tiletactics",
-    "description": "A Kulami-inspired strategic tile game where players place and move tiles to create patterns and block opponents",
-    "goal": "To recreate the strategy and tactical depth of Kulami with modern digital features and a responsive design",
+    "id": "4",
+    "title": "Word Pyramid",
+    "titleForLink": "word-game",
+    "description": "A strategic word game inspired by pyramid structures",
+    "goal": "To create a responsive and strategic word puzzle game",
     "features": [
-      "Turn-based gameplay: players take turns to place and move tiles",
-      "Show possible moves: highlights valid tile placements for players to consider",
-      "Restart option: option to restart the game and play again from the beginning",
-      "Marble count: keep track of how many marbles each player has placed or captured",
-      "Responsive design: optimized for desktop and mobile devices"
+      "Pyramid structure for word creation",
+      "Daily challenge mode",
+      "Responsive design"
     ],
-    "date": "Jan 2025",
+    "date": "Dec 2024",
     "contributors": [
       {
         "name": "May Myo Khine",
-        "role": "Lead Developer"
+        "role": "Frontend Developer"
+      },
+      {
+        "name": "Ethan Sherr",
+        "role": "Backend Developer"
       }
     ],
-    "technologies": ["React", "TypeScript", "CSS", "StyleX"],
-    "github": "https://github.com/YourUsername/tiletactics",
-    "liveLink": "http://tiletactics.builtbymay.com/",
+    "technologies": ["React", "TypeScript", "CSS", "StyleX", "SQL"],
+    "github": "https://github.com/EthanSherr/word-games/",
+    "liveLink": "http://word-games.builtbymay.com/daily-pyramid",
     "tag": ["isActive", "completed"],
     "images": [
       {
-        "imageDesc": "TileTactics gameplay screen",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/tileTactics/tileTactics1.png?raw=true"
+        "imageDesc": "Word Pyramid main gameplay screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid1.png?raw=true"
       },
       {
-        "imageDesc": "TileTactics gameplay screen during active game play ",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/tileTactics/tileTactics2.png?raw=true"
+        "imageDesc": "Word Pyramid gameplay screen during active play",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid2.png?raw=true"
       },
       {
-        "imageDesc": "TileTactics gameplay screen during active game play, showing the possible moves ",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/tileTactics/tileTactics3.png?raw=true"
+        "imageDesc": "Word Pyramid congratulation screen after winning, with sign-up prompts",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid3.png?raw=true"
+      },
+      {
+        "imageDesc": "Word Pyramid gameplay screen with prompt to return tomorrow for a new puzzle",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/wordpyramid/wordpyramid4.png?raw=true"
       }
     ]
   },
   {
-    "id": "4",
+    "id": "5",
     "title": "Wish Tree",
     "titleForLink": "wish-tree",
     "description": "A simple, responsive platform to help users manage their wish lists and shopping lists for holidays and special dates",
@@ -160,45 +201,5 @@
     "liveLink": "",
     "tag": ["underConstruction"],
     "images": []
-  },
-  {
-    "id": "5",
-    "title": "Bite Bot",
-    "titleForLink": "bite-bot",
-    "description": "An AI-powered recipe assistant that helps users discover recipes based on the ingredients they have on hand",
-    "goal": "To build a responsive, AI-enhanced platform that supports users in efficient meal planning by suggesting relevant recipes. I created it because I enjoy cooking and thought it would be fun—plus, I often find myself unsure of what to make with my in-stock groceries.",
-    "features": [
-      "AI recipe suggestions: recommends recipes based on selected ingredients using intelligent filtering",
-      "Ingredient dropdown: users can select ingredients from an A–Z list",
-      "Smart matching: filters recipes that contain all or most of the chosen ingredients",
-      "Responsive design: optimized for both mobile and desktop users",
-      "Performance-first development: built with Vite for fast load times and smooth user experience"
-    ],
-    "date": "May 2025",
-    "contributors": [
-      {
-        "name": "May Myo Khine",
-        "role": "Frontend Developer"
-      }
-    ],
-    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "AI"],
-    "github": "https://github.com/MayKhine/bite-bot",
-    "liveLink": "https://bitebot.builtbymay.com/",
-    "tag": ["isActive"],
-    "images": [
-      {
-        "imageDesc": "biteBot screen",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/biteBot1.png?raw=true"
-      },
-      {
-        "imageDesc": "biteBot screen during ingredient look up",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/biteBot2.png?raw=true"
-      },
-      {
-        "imageDesc": "biteBot screen showing recommended recipe",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/biteBot3.png?raw=true"
-      }
-    ],
-    "projectImg": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/project.png?raw=true"
   }
 ]
