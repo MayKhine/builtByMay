@@ -228,6 +228,20 @@
     "github": "https://github.com/MayKhine/crownd",
     "liveLink": "",
     "tag": ["not live yet"],
-    "images": []
+    "images": [
+      {
+        "imageDesc": "crownd gameplay screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/crownd1.png?raw=true"
+      },
+      {
+        "imageDesc": "crownd gameplay screen during active play",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/crownd2.png?raw=true"
+      },
+      {
+        "imageDesc": "crownd gameplay screen showing grid size options",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/crownd3.png?raw=true"
+      }
+    ],
+    "projectImg": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/project.png?raw=true"
   }
 ]
