@@ -185,6 +185,20 @@
     "github": "https://github.com/MayKhine/bite-bot",
     "liveLink": "https://bitebot.builtbymay.com/",
     "tag": ["isActive"],
-    "images": []
+    "images": [
+      {
+        "imageDesc": "biteBot screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/biteBot1.png?raw=true"
+      },
+      {
+        "imageDesc": "biteBot screen during ingredient look up",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/biteBot2.png?raw=true"
+      },
+      {
+        "imageDesc": "biteBot screen showing recommended recipe",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/biteBot3.png?raw=true"
+      }
+    ],
+    "projectImg": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/project.png?raw=true"
   }
 ]
