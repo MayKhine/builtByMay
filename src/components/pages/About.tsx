@@ -89,10 +89,9 @@ export const About = () => {
                     styles.marginBottom
                   )}
                 >
-                  I’m a developer with a passion for design and UI/UX. I am
-                  looking for an exciting new job opportunity. I’m working on
-                  personal projects to keep my skills sharp and my creativity
-                  thriving.
+                  I’m a developer with a love for thoughtful design and clean
+                  code. I’m currently looking for my next opportunity where I
+                  can grow, collaborate, and build great user experiences.
                 </div>
                 <div
                   {...stylex.props(
@@ -100,12 +99,29 @@ export const About = () => {
                     styles.marginBottom
                   )}
                 >
-                  With 3 years of experience in database development and report
-                  creation for clients using Oracle Database and Jasper Reports,
-                  I’ve honed my ability to deliver efficient, timely solutions.
-                  I’m a quick learner and adaptable professional. I am confident
-                  in my ability to bring value to any team I join.
+                  I specialize in crafting responsive, intuitive web apps using
+                  React, TypeScript, and modern UI tools. With 3 years of
+                  experience as a database developer, I bring a strong
+                  foundation in data and a detail-oriented mindset to everything
+                  I build. Whether I’m bringing designs to life or fine-tuning
+                  performance, I care deeply about both form and function.
                 </div>
+
+                <div
+                  {...stylex.props(
+                    projectStyles.smallFont,
+                    styles.marginBottom
+                  )}
+                >
+                  I’m sharpening my skills even further through Google’s UI/UX
+                  Design and Data Analytics certifications. I’m a continuous
+                  learner who loves exploring the intersection of design, data,
+                  and development. Recently, I created my first Lottie animation
+                  from scratch for my BiteBot app and have been diving deeper
+                  into accessibility and design systems. I'm passionate about
+                  creating tools that are not only useful but delightful to use.
+                </div>
+
                 <div
                   {...stylex.props(
                     projectStyles.smallFont,
@@ -195,21 +211,27 @@ export const About = () => {
                   Technical Skills
                 </div>
                 <div {...stylex.props(projectStyles.smallFont)}>
+                  <div>React.js</div>
                   <div>TypeScript</div>
                   <div>JavaScript</div>
                   <div>HTML</div>
                   <div>CSS</div>
                   <div>UI/UX Design</div>
+                  <div>Tailwind</div>
                   <div>StyleX</div>
-                  <div>React.js</div>
+                  <div>Lottie</div>
+                  <div>Figma</div>
                   <div>Node.js</div>
+                  <div>Express.js</div>
                   <div>RESTful APIs</div>
+                  <div>Docker</div>
+                  <div>Nginx</div>
                   <div>PL/SQL</div>
                   <div>SQL</div>
                   <div>Oracle Database</div>
-                  <div>Figma</div>
                   <div>Tableau</div>
                   <div>PowerBI</div>
+                  <div>Jasper Reports</div>
                 </div>
               </div>
               <div {...stylex.props(styles.experienceSec)}>
@@ -292,11 +314,8 @@ const styles = stylex.create({
     width: "100%",
     height: "100%",
     maxWidth: "70rem",
-    // backgroundColor: "gray",
     justifySelf: "center",
     alignSelf: "center",
-    // margin: "2rem",
-    // padding: "2rem",
   },
   profileImg: {
     width: "20rem",

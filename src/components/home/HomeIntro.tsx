@@ -6,12 +6,14 @@ export const HomeIntro = () => {
   return (
     <div {...stylex.props(styles.base)}>
       <div {...stylex.props(styles.center)}>
-        <div {...stylex.props(projectStyles.bigFont)}>
+        <div {...stylex.props(projectStyles.bigFont, styles.about)}>
           <div>Hello, I am May!</div>
           <div>
-            I am a front-end developer with a passion for UI/UX designs. Based
-            in Boston, MA. I bring designs and ideas to life through clean and
-            efficcient code.
+            I'm a Boston-based developer. I love turning ideas into smooth,
+            stylish web experiences. I write clean, efficient code with
+            thoughtful design, and I’m always learning something new. With a
+            solid foundation in databases and a sharp eye for data, I bring both
+            creativity and logic to everything I build.
           </div>
           <div>
             Currently, I am working on
@@ -19,15 +21,8 @@ export const HomeIntro = () => {
               {...stylex.props(styles.proejctText, styles.linkedText)}
               to={"./projects"}
             >
-              {" "}
               my personal projects
             </Link>
-            {/* <a
-              href={"./projects"}
-              {...stylex.props(styles.proejctText, styles.linkedText)}
-            >
-              my personal projects
-            </a> */}
             to sharpen my technical skills.
           </div>
         </div>
@@ -37,7 +32,7 @@ export const HomeIntro = () => {
           </div>
           <div>Front-End Development</div>
           <div {...stylex.props(projectStyles.slimFont)}>
-            React, TypeScript, JavaScript, HTML, CSS, StyleX
+            React, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, StyleX
           </div>
           <div>Back-End Development</div>
           <div {...stylex.props(projectStyles.slimFont)}>
@@ -48,7 +43,10 @@ export const HomeIntro = () => {
             PL/SQL, SQL, Oracle Database
           </div>
           <div>Other Technologies</div>
-          <div {...stylex.props(projectStyles.slimFont)}>Figma, Tableau</div>
+          <div {...stylex.props(projectStyles.slimFont)}>
+            Git, GitHub, Docker, Nginx, Figma, Lottie, Tableau, PowerBI, Jasper
+            Reprots
+          </div>
         </div>
       </div>
     </div>
@@ -67,6 +65,12 @@ const styles = stylex.create({
   center: {
     maxWidth: "49rem",
     minWidth: "15rem",
+    gap: "1rem",
+  },
+  about: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
   },
 
   proejctText: {

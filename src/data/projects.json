@@ -42,6 +42,48 @@
   },
   {
     "id": "2",
+    "title": "Crown'd",
+    "titleForLink": "crownd",
+    "description": "A strategic puzzle game where players place crown puzzle blocks on a grid to meet the win condition.",
+    "goal": "To create a fun and engaging puzzle game inspired by the LinkedIn Queens game I played and enjoyed. I thought, 'Why just play it when I can also build it?'",
+    "features": [
+      "Interactive puzzle grid for placing crowns and X marks",
+      "Win condition: exactly one crown per row, column, and color region",
+      "Left-click to place a crown; right-click to place an X (invalid spot)",
+      "Crown placement rule: crowns cannot touch, even diagonally",
+      "Challenging gameplay: each move presents a new strategic decision",
+      "Built-in timer to track performance",
+      "Responsive design for seamless play on desktop and mobile"
+    ],
+    "date": "Apr 2025",
+    "contributors": [
+      {
+        "name": "May Myo Khine",
+        "role": "Developer"
+      }
+    ],
+    "technologies": ["React", "TypeScript", "CSS", "StyleX"],
+    "github": "https://github.com/MayKhine/crownd",
+    "liveLink": "https://crownd.builtbymay.com/",
+    "tag": ["isActive", "completed"],
+    "images": [
+      {
+        "imageDesc": "crownd gameplay screen",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/crownd1.png?raw=true"
+      },
+      {
+        "imageDesc": "crownd gameplay screen during active play",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/crownd2.png?raw=true"
+      },
+      {
+        "imageDesc": "crownd gameplay screen showing grid size options",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/crownd3.png?raw=true"
+      }
+    ],
+    "projectImg": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/project.png?raw=true"
+  },
+  {
+    "id": "3",
     "title": "TileTactics",
     "titleForLink": "tiletactics",
     "description": "A Kulami-inspired strategic tile game where players place and move tiles to create patterns and block opponents",
@@ -81,7 +123,7 @@
   },
 
   {
-    "id": "3",
+    "id": "4",
     "title": "Minesweeper",
     "titleForLink": "minesweeper",
     "description": "A classic Minesweeper game",
@@ -129,7 +171,7 @@
   },
 
   {
-    "id": "4",
+    "id": "5",
     "title": "Word Pyramid",
     "titleForLink": "word-game",
     "description": "A strategic word game inspired by pyramid structures",
@@ -174,7 +216,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "6",
     "title": "Wish Tree",
     "titleForLink": "wish-tree",
     "description": "A simple, responsive platform to help users manage their wish lists and shopping lists for holidays and special dates",
@@ -202,47 +244,5 @@
     "liveLink": "",
     "tag": ["underConstruction"],
     "images": []
-  },
-  {
-    "id": "6",
-    "title": "Crown'd",
-    "titleForLink": "crownd",
-    "description": "A strategic puzzle game where players place crown puzzle blocks on a grid to meet the win condition.",
-    "goal": "To create a fun and engaging puzzle game inspired by the LinkedIn Queens game I played and enjoyed. I thought, 'Why just play it when I can also build it?'",
-    "features": [
-      "Interactive puzzle grid for placing crowns and X marks",
-      "Win condition: exactly one crown per row, column, and color region",
-      "Left-click to place a crown; right-click to place an X (invalid spot)",
-      "Crown placement rule: crowns cannot touch, even diagonally",
-      "Challenging gameplay: each move presents a new strategic decision",
-      "Built-in timer to track performance",
-      "Responsive design for seamless play on desktop and mobile"
-    ],
-    "date": "Apr 2025",
-    "contributors": [
-      {
-        "name": "May Myo Khine",
-        "role": "Developer"
-      }
-    ],
-    "technologies": ["React", "TypeScript", "CSS", "StyleX"],
-    "github": "https://github.com/MayKhine/crownd",
-    "liveLink": "",
-    "tag": ["not live yet"],
-    "images": [
-      {
-        "imageDesc": "crownd gameplay screen",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/crownd1.png?raw=true"
-      },
-      {
-        "imageDesc": "crownd gameplay screen during active play",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/crownd2.png?raw=true"
-      },
-      {
-        "imageDesc": "crownd gameplay screen showing grid size options",
-        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/crownd3.png?raw=true"
-      }
-    ],
-    "projectImg": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/project.png?raw=true"
   }
 ]
