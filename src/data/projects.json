@@ -1,6 +1,47 @@
 [
   {
-    "id": "1",
+    "id": "oysterhour",
+    "title": "Oyster Hour",
+    "titleForLink": "oyster-hour",
+    "description": "An map-based web app that helps food lovers find $1 oyster deals around the city.",
+    "goal": "To build a playful, responsive app that shows where to find dollar oyster happy hours. I created it because I’m an oyster lover, and this was a fun way to combine my love of seafood with front-end development.",
+    "features": [
+      "Interactive map: see all participating restaurants on a Leaflet-powered map",
+      "Real-time filter: toggle to show only spots offering dollar oysters *right now*",
+      "Restaurant detail view: see oyster hours, address, phone number, and Google Maps link",
+      "Scroll-to-card interaction: clicking a marker highlights the matching restaurant card",
+      "Responsive layout: optimized for both desktop and mobile screens",
+      "Custom tooltip + theming: styled tooltips and pastel color palette with a summery, beachy feel"
+    ],
+    "date": "Jun 2025",
+    "contributors": [
+      {
+        "name": "May Myo Khine",
+        "role": "Developer"
+      }
+    ],
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "AI"],
+    "github": "https://github.com/MayKhine/oysterHour",
+    "liveLink": "https://oysterhour.builtbymay.com/",
+    "tag": ["isActive"],
+    "images": [
+      {
+        "imageDesc": "oysterhour screen",
+        "imageLink": ""
+      },
+      {
+        "imageDesc": "biteBot screen during ingredient look up",
+        "imageLink": ""
+      },
+      {
+        "imageDesc": "biteBot screen showing recommended recipe",
+        "imageLink": ""
+      }
+    ],
+    "projectImg": ""
+  },
+  {
+    "id": "bitebot",
     "title": "Bite Bot",
     "titleForLink": "bite-bot",
     "description": "An AI-powered recipe assistant that helps users discover recipes based on the ingredients they have on hand",
@@ -41,7 +82,7 @@
     "projectImg": "https://github.com/MayKhine/builtByMay/blob/main/src/data/biteBot/project.png?raw=true"
   },
   {
-    "id": "2",
+    "id": "crownd",
     "title": "Crown'd",
     "titleForLink": "crownd",
     "description": "A strategic puzzle game where players place crown puzzle blocks on a grid to meet the win condition.",
@@ -83,7 +124,7 @@
     "projectImg": "https://github.com/MayKhine/builtByMay/blob/main/src/data/crownd/project.png?raw=true"
   },
   {
-    "id": "3",
+    "id": "titletactics",
     "title": "TileTactics",
     "titleForLink": "tiletactics",
     "description": "A Kulami-inspired strategic tile game where players place and move tiles to create patterns and block opponents",
@@ -121,9 +162,8 @@
       }
     ]
   },
-
   {
-    "id": "4",
+    "id": "mindsweeper",
     "title": "Minesweeper",
     "titleForLink": "minesweeper",
     "description": "A classic Minesweeper game",
@@ -169,9 +209,8 @@
       }
     ]
   },
-
   {
-    "id": "5",
+    "id": "wordpyramid",
     "title": "Word Pyramid",
     "titleForLink": "word-game",
     "description": "A strategic word game inspired by pyramid structures",
@@ -216,7 +255,7 @@
     ]
   },
   {
-    "id": "6",
+    "id": "wishtree",
     "title": "Wish Tree",
     "titleForLink": "wish-tree",
     "description": "A simple, responsive platform to help users manage their wish lists and shopping lists for holidays and special dates",
