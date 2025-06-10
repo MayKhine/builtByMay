@@ -11,7 +11,7 @@
       "Restaurant detail view: see oyster hours, address, phone number, and Google Maps link",
       "Scroll-to-card interaction: clicking a marker highlights the matching restaurant card",
       "Responsive layout: optimized for both desktop and mobile screens",
-      "Custom tooltip + theming: styled tooltips and pastel color palette with a summery, beachy feel"
+      "🦪 Custom tooltip + theming: styled tooltips and pastel color palette with a summery, beachy feel"
     ],
     "date": "Jun 2025",
     "contributors": [
@@ -20,25 +20,21 @@
         "role": "Developer"
       }
     ],
-    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "AI"],
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "Leaflet"],
     "github": "https://github.com/MayKhine/oysterHour",
     "liveLink": "https://oysterhour.builtbymay.com/",
     "tag": ["isActive"],
     "images": [
       {
         "imageDesc": "oysterhour screen",
-        "imageLink": ""
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/oysterHour/oysterhour1.png?raw=true"
       },
       {
-        "imageDesc": "biteBot screen during ingredient look up",
-        "imageLink": ""
-      },
-      {
-        "imageDesc": "biteBot screen showing recommended recipe",
-        "imageLink": ""
+        "imageDesc": "oysterhour screen with dollor oyster now filter on",
+        "imageLink": "https://github.com/MayKhine/builtByMay/blob/main/src/data/oysterHour/oysterhour2.png?raw=true"
       }
     ],
-    "projectImg": ""
+    "projectImg": "https://github.com/MayKhine/builtByMay/blob/main/src/data/oysterHour/project.png?raw=true"
   },
   {
     "id": "bitebot",
